@@ -78,7 +78,7 @@ const COLORS = {
 };
 
 const LAYERS = ['hairBack', 'body', 'hairMid', 'hairBase', 'ear', 'face', 'skin', 'makeup', 'skinTop', 'mouth', 'eye',
-  'hairLine', 'brow', 'glasses', 'hairFront', 'hairSide', 'acc'];
+  'hairLine', 'brow', 'glasses', 'hairFront', 'hairSide', 'hairTop', 'acc'];
 
 // 항목 -> 기본 레이어. 여기 없는 항목(eye, pupil, hl, lash, iris)은 따로 처리한다.
 const GENERIC = {
@@ -95,6 +95,9 @@ LAYERS.forEach((l) => ['half', 'full'].forEach((s) => { PIECE_NAMES[(l + '-' + s
 // 옆머리·추가머리 등에서는 hairLine 레이어(헤어라인 선 위, 앞머리 아래), 뒷머리 파일에서는 hairBack(목·몸 뒤)
 PIECE_NAMES['back-half'] = 'back-half';
 PIECE_NAMES['back-full'] = 'back-full';
+// top-half / top-full = 맨 위 머리(hairTop 레이어). 옆머리보다 앞에 나와야 하는 앞머리 조각
+PIECE_NAMES['top-half'] = 'top-half';
+PIECE_NAMES['top-full'] = 'top-full';
 const BACK_LAYER = (cat) => (cat === 'back' ? 'hairBack' : 'hairLine');
 const MARKERS = { iris: 1 };
 // 그림 없이 _parts.json 의 수치만 쓰는 항목 (눈동자 크기, 아이라인에서 만드는 것들)
@@ -453,10 +456,13 @@ function buildCategory(cat) {
         p.pieces[layer] = p.pieces[layer] || {};
         p.pieces[layer][side] = (p.pieces[layer][side] || '') + m;
       };
+      // "top": true 인 항목은 기본 조각(half/full)이 통째로 맨 위 머리(hairTop)로 간다
+      const base = e.top ? 'hairTop' : GENERIC[cat];
       for (const name of Object.keys(pc)) {
-        if (name === 'half') put(GENERIC[cat], 'half', pc[name]);
+        if (name === 'half') put(base, 'half', pc[name]);
+        else if (name === 'top-half' || name === 'top-full') put('hairTop', name.slice(4), pc[name]);
         else if (name === 'back-half' || name === 'back-full') put(BACK_LAYER(cat), name.slice(5), pc[name]);
-        else if (name === 'full' || name === 'left' || name === 'right') put(GENERIC[cat], 'full', pc[name]);
+        else if (name === 'full' || name === 'left' || name === 'right') put(base, 'full', pc[name]);
         else {
           const k = name.lastIndexOf('-');
           if (k > 0 && LAYERS.indexOf(name.slice(0, k)) >= 0) put(name.slice(0, k), name.slice(k + 1), pc[name]);

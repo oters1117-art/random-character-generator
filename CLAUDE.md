@@ -49,8 +49,9 @@ samples/                    확인용 캡처 모음 (없어도 됨)
   머리 `#5d4e48`, 머리 선 `#2b201d`, 피부 `#fdeeea`, 피부 선 `#b46352`, 속눈썹·아이라인 `#1e1a1a`, 눈동자 `#7e5647`, 입술 `#dc6450`, 악세사리 `#d8433b` 등.
 - 조각 안의 `@@`는 그림마다 다른 번호로 바뀐다(id 충돌 방지). 빌드가 파일 안의 id에 자동으로 붙인다.
 - 레이어 순서(아래→위):
-  `hairBack` → `body` → `hairMid` → `hairBase` → `ear` → `face` → `skin` → `makeup` → `skinTop` → `mouth` → `eye` → `hairLine` → `brow` → `glasses` → `hairFront` → `hairSide` → `acc`
+  `hairBack` → `body` → `hairMid` → `hairBase` → `ear` → `face` → `skin` → `makeup` → `skinTop` → `mouth` → `eye` → `hairLine` → `brow` → `glasses` → `hairFront` → `hairSide` → `hairTop` → `acc`
   (옆머리가 앞머리 위, 눈썹·안경은 앞머리 아래: 사용자 요청 2026-11-13)
+  옆머리보다 앞에 나와야 하는 머리는 그룹 이름 **`top-half`/`top-full`**(`hairTop` 레이어, 옆머리 위·악세사리 아래) 또는 `_parts.json`의 `"top": true`(그 항목의 half/full 전체). 사과머리(`extra/apple.svg`)가 `top-full`을 쓴다(2026-11-13).
   앞머리 뒤로 들어가야 하는 옆머리 조각(구레나룻 등)은 그룹 이름을 **`back-half`**(또는 `back-full`, `back_half`)로 하면 앞머리 아래(`hairLine` 레이어)에 놓인다. 뒷머리 파일에서 `back-*`는 `hairBack`(목·몸 뒤). `hairLine-half`도 그대로 된다(2026-11-13, `build.js`의 `BACK_LAYER`).
 
 ## 항목
