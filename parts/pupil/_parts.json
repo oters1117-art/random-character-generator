@@ -10,5 +10,7 @@
   {"id":"star","name":"별","w":0.7},
   {"id":"cross","name":"십자","w":0.7},
   {"id":"blank","name":"동공 없음","w":0.8},
-  {"id":"dot","name":"점눈","w":1,"noRing":true}
+  {"id":"dot","name":"점눈","w":1,"noRing":true},
+  {"id":"octo","name":"octo"},
+  {"id":"goat","name":"goat"}
 ]
