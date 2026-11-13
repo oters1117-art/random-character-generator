@@ -1,11 +1,11 @@
 [
-  {"id":"none","name":"없음","default":true,"none":true,"w":50},
-  {"id":"stud","name":"스터드","w":2},
-  {"id":"hoop","name":"링"},
-  {"id":"drop","name":"드롭"},
-  {"id":"bar","name":"긴 바"},
-  {"id":"cuff","name":"이어커프","w":0.6},
-  {"id":"stud-mini-2","name":"stud-mini-2"},
-  {"id":"stud-mini","name":"stud-mini"},
-  {"id":"stud-big1-mini2","name":"stud-big1-mini2"}
+  {"id":"none","name":"없음","group":"없음","default":true,"none":true,"w":50},
+  {"id":"stud-mini","name":"미니 스터드","group":"스터드"},
+  {"id":"stud","name":"스터드","group":"스터드","w":2},
+  {"id":"stud-mini-2","name":"미니 스터드 두 개","group":"스터드"},
+  {"id":"stud-big1-mini2","name":"스터드 + 미니 두 개","group":"스터드"},
+  {"id":"hoop","name":"링","group":"링 · 드롭"},
+  {"id":"drop","name":"드롭","group":"링 · 드롭"},
+  {"id":"bar","name":"긴 바","group":"링 · 드롭"},
+  {"id":"cuff","name":"이어커프","group":"링 · 드롭","w":0.6}
 ]

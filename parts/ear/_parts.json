@@ -1,8 +1,8 @@
 [
-  {"id":"normal","name":"기본","w":10,"default":true},
-  {"id":"big","name":"큰 귀","w":1},
-  {"id":"soft","name":"살짝 뾰족한 귀","w":1},
-  {"id":"elf","name":"뾰족귀 (엘프)","w":0.6},
-  {"id":"cat","name":"cat"},
-  {"id":"fox","name":"fox"}
+  {"id":"normal","name":"기본","group":"사람 귀","w":10,"default":true},
+  {"id":"big","name":"큰 귀","group":"사람 귀","w":1},
+  {"id":"soft","name":"살짝 뾰족한 귀","group":"사람 귀","w":1},
+  {"id":"elf","name":"뾰족귀 (엘프)","group":"사람 귀","w":0.6},
+  {"id":"cat","name":"고양이귀","group":"동물 귀"},
+  {"id":"fox","name":"여우귀","group":"동물 귀"}
 ]

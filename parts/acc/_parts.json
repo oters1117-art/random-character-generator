@@ -1,10 +1,10 @@
 [
-  {"id":"none","name":"없음","default":true,"none":true},
-  {"id":"pin","name":"헤어핀"},
-  {"id":"band","name":"머리띠"},
-  {"id":"bow","name":"리본 머리띠"},
-  {"id":"snap2","name":"똑딱핀 두 개"},
-  {"id":"clawclip","name":"집게핀"},
-  {"id":"bigbow","name":"큰 리본 (뒤)"},
-  {"id":"hairroll","name":"헤어롤","w":0.6}
+  {"id":"none","name":"없음","group":"없음","default":true,"none":true},
+  {"id":"pin","name":"헤어핀","group":"핀"},
+  {"id":"snap2","name":"똑딱핀 두 개","group":"핀"},
+  {"id":"clawclip","name":"집게핀","group":"핀"},
+  {"id":"hairroll","name":"헤어롤","group":"핀","w":0.6},
+  {"id":"band","name":"머리띠","group":"머리띠 · 리본"},
+  {"id":"bow","name":"리본 머리띠","group":"머리띠 · 리본"},
+  {"id":"bigbow","name":"큰 리본 (뒤)","group":"머리띠 · 리본"}
 ]
