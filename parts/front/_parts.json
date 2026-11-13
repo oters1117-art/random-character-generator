@@ -28,14 +28,14 @@
   {"id":"diagonal","name":"사선뱅 (M)","group":"사이드 · 비대칭","w":1},
   {"id":"diagonallong","name":"사선뱅 (L)","group":"사이드 · 비대칭","w":1},
   {"id":"eyecover1","name":"한쪽 눈 가림","group":"사이드 · 비대칭","w":1},
+  {"id":"kkaennip","name":"깻잎 머리","group":"사이드 · 비대칭"},
   {"id":"pinned","name":"핀으로 넘긴 앞머리","group":"사이드 · 비대칭","w":1},
+  {"id":"braidbang","name":"땋은 앞머리","group":"사이드 · 비대칭"},
+  {"id":"twostrand","name":"긴 두 갈래 앞머리","group":"긴 앞머리"},
+  {"id":"longcurlin","name":"긴 앞머리 안말림","group":"긴 앞머리"},
+  {"id":"himebang","name":"히메 앞머리","group":"긴 앞머리"},
+  {"id":"longwave","name":"긴 웨이브 앞머리","group":"긴 앞머리"},
+  {"id":"longwave-one","name":"긴 웨이브 앞머리 (한쪽)","group":"긴 앞머리"},
   {"id":"allback","name":"올백 (앞머리 없음)","group":"올백","w":1.5,"empty":true},
-  {"id":"babyhair","name":"올백 + 잔머리","group":"올백","w":1.5},
-  {"id":"긴 두갈래 앞머리","name":"긴 두갈래 앞머리"},
-  {"id":"긴 앞머리 말림","name":"긴 앞머리 말림"},
-  {"id":"히메","name":"히메"},
-  {"id":"깻잎","name":"깻잎"},
-  {"id":"땋은 앞머리","name":"땋은 앞머리"},
-  {"id":"긴 웨이브 앞머리","name":"긴 웨이브 앞머리"},
-  {"id":"긴 웨이브 앞머리-one","name":"긴 웨이브 앞머리-one"}
+  {"id":"babyhair","name":"올백 + 잔머리","group":"올백","w":1.5}
 ]

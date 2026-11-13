@@ -41,14 +41,14 @@
   {"id":"pigtail","name":"피그테일","group":"양갈래","w":1},
   {"id":"drilltwin","name":"드릴 트윈","group":"양갈래","w":0.5},
   {"id":"braid1","name":"한 가닥 땋기","group":"땋기","w":1},
+  {"id":"braid-big-side","name":"굵은 사이드 땋기","group":"땋기"},
   {"id":"braid2short","name":"양갈래 땋기 (S)","group":"땋기","w":1},
   {"id":"braid2","name":"양갈래 땋기 (L)","group":"땋기","w":1},
+  {"id":"braid-ring","name":"땋은 고리 양갈래","group":"땋기"},
   {"id":"bun1","name":"정수리 당고 (M)","group":"번 · 당고","w":1.5},
   {"id":"bun_l","name":"정수리 당고 (L)","group":"번 · 당고"},
   {"id":"bun2","name":"양쪽 당고","group":"번 · 당고","w":1.5},
   {"id":"buntwin","name":"당고 + 트윈테일","group":"번 · 당고","w":0.7},
   {"id":"lowbun","name":"낮은 번 (옆)","group":"번 · 당고","w":1},
-  {"id":"lowbuns","name":"로우 번 두 개","group":"번 · 당고","w":1},
-  {"id":"braid-big-side","name":"braid-big-side"},
-  {"id":"braid-ring","name":"braid-ring"}
+  {"id":"lowbuns","name":"로우 번 두 개","group":"번 · 당고","w":1}
 ]

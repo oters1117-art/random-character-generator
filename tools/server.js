@@ -187,6 +187,24 @@ http.createServer((req, res) => {
   const url = decodeURIComponent(req.url.split('?')[0]);
   const q = new URLSearchParams(req.url.split('?')[1] || '');
 
+  // 4×4 샘플 PNG 를 samples 폴더에 저장한다 (본문 = PNG 그대로)
+  if (url === '/api/sample' && req.method === 'POST') {
+    const name = q.get('name') || '';
+    const done = (code, r) => { res.writeHead(code, { 'Content-Type': TYPES['.json'] }); res.end(JSON.stringify(r)); };
+    if (!/^[A-Za-z0-9._-]+\.png$/.test(name)) { done(400, { error: '파일 이름이 올바르지 않습니다' }); return; }
+    const chunks = []; let size = 0;
+    req.on('data', (c) => { size += c.length; if (size > 4e7) req.destroy(); else chunks.push(c); });
+    req.on('end', () => {
+      try {
+        const dir = path.join(ROOT, 'samples');
+        fs.mkdirSync(dir, { recursive: true });
+        fs.writeFileSync(path.join(dir, name), Buffer.concat(chunks));
+        done(200, { saved: 'samples/' + name });
+      } catch (e) { done(400, { error: e.message }); }
+    });
+    return;
+  }
+
   if (url.indexOf('/api/') === 0 && url !== '/api/build' && url !== '/api/events') {
     handleApi(url, q, req).then(
       (r) => { res.writeHead(200, { 'Content-Type': TYPES['.json'] }); res.end(JSON.stringify(r)); },

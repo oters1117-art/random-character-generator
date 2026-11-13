@@ -165,5 +165,7 @@ msedge --headless --disable-gpu --hide-scrollbars --allow-file-access-from-files
 
 ## 좌우 반전과 줄 버튼 (2026-11-14)
 
-- 앞머리·추가머리·옆머리·뒷머리·피부특징 줄에 좌우 반전 버튼. `state.flip = { front: true, ... }`, 조합 코드에는 `fl:hf.hs`처럼 붙는다(`core.js`의 `FLIP_KEYS`, `canFlip`). 뒤집히는 것은 `full` 조각뿐이라 `half`만 있는 파츠에서는 버튼이 꺼진다. 전체 랜덤은 고정하지 않은 항목의 반전도 반반 확률로 정한다.
+- 앞머리·추가머리·옆머리·뒷머리·피부특징 줄에 좌우 반전 버튼. `state.flip = { front: true, ... }`, 조합 코드에는 `fl:hf.hs`처럼 붙는다(`core.js`의 `FLIP_KEYS`, `canFlip`). 뒤집히는 것은 `full` 조각뿐이라 `half`만 있는 파츠에서는 효과가 없다. 반전은 켜 둔 대로 유지된다: 랜덤이 바꾸지 않고, 좌우가 같은 파츠에서는 버튼이 흐려질 뿐 켠 상태가 남는다.
 - 줄의 랜덤·고정 버튼은 글자 대신 아이콘(회전 화살표, 압정). `app.js`의 `ICON`, 버튼은 `.tools` 안에 모여 있다.
+- 4×4 샘플(2026-11-14): 로컬 화면의 "4×4 샘플" 버튼이 고정 항목을 지킨 채 16명을 뽑아 보여 주고, 저장하면 `tools/server.js`의 `/api/sample`이 `samples/random-4x4-<시각>.png`(2048px)로 쓴다. 얼굴을 누르면 그 캐릭터를 불러온다.
+- 주인이 만든 한글·임시 이름 파츠는 영문 id로 바꿨다(2026-11-14): 앞머리 `himebang` `twostrand` `longcurlin` `longwave` `longwave-one` `kkaennip` `braidbang`, 추가머리 `flipends`, 옆머리 `waveshort` `curl` `curllong` `volumecurl` `volumecurllong` `messyin` `braidtemple`, 눈썹 `danmuji`, 입 `frontteeth`.

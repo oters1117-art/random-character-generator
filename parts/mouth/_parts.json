@@ -12,7 +12,7 @@
   {"id":"tri","name":"세모 입","group":"벌린 입"},
   {"id":"grin","name":"이 보이는 웃음","group":"벌린 입"},
   {"id":"fang","name":"덧니","group":"벌린 입"},
-  {"id":"front teeth","name":"앞니","group":"벌린 입"},
+  {"id":"frontteeth","name":"앞니","group":"벌린 입"},
   {"id":"shark","name":"상어 이빨","group":"벌린 입"},
   {"id":"partedLips","name":"살짝 벌린 입술","group":"입술"}
 ]
