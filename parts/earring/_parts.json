@@ -1,5 +1,5 @@
 [
-  {"id":"none","name":"없음","default":true,"none":true},
+  {"id":"none","name":"없음","default":true,"none":true,"w":50},
   {"id":"stud","name":"스터드","w":2},
   {"id":"hoop","name":"링"},
   {"id":"drop","name":"드롭"},
