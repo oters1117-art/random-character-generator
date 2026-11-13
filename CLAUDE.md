@@ -41,8 +41,9 @@ samples/                    확인용 캡처 모음 (없어도 됨)
   머리 `#5d4e48`, 머리 선 `#2b201d`, 피부 `#fdeeea`, 피부 선 `#b46352`, 속눈썹·아이라인 `#1e1a1a`, 눈동자 `#7e5647`, 입술 `#dc6450`, 악세사리 `#d8433b` 등.
 - 조각 안의 `@@`는 그림마다 다른 번호로 바뀐다(id 충돌 방지). 빌드가 파일 안의 id에 자동으로 붙인다.
 - 레이어 순서(아래→위):
-  `hairBack` → `body` → `hairMid` → `hairBase` → `ear` → `face` → `skin` → `makeup` → `skinTop` → `mouth` → `eye` → `hairLine` → `hairFront` → `hairSide` → `brow` → `glasses` → `acc`
-  (옆머리가 앞머리 위: 사용자 요청 2026-11-13)
+  `hairBack` → `body` → `hairMid` → `hairBase` → `ear` → `face` → `skin` → `makeup` → `skinTop` → `mouth` → `eye` → `hairLine` → `brow` → `glasses` → `hairFront` → `hairSide` → `acc`
+  (옆머리가 앞머리 위, 눈썹·안경은 앞머리 아래: 사용자 요청 2026-11-13)
+  앞머리 뒤로 들어가야 하는 옆머리 조각(구레나룻 등)은 그룹 이름을 `hairLine-half`로 하면 앞머리 아래에 놓인다.
 
 ## 항목
 
@@ -59,7 +60,7 @@ samples/                    확인용 캡처 모음 (없어도 됨)
 | 악세사리 | `acc` 헤어 악세사리, `glasses` 안경(둥근테, 사각테, 얇은 메탈테 `boston`, 뿔테 `horn`) | |
 
 - 색 슬롯: 헤어 색, 눈 색(눈동자 소분류), **피부색**(얼굴형 바로 뒤, 팔레트 `skin`), 악세사리 색, 배경 색.
-- `start.bat`(서버)로 열면 파츠 줄마다 **파일** 버튼이 붙는다: `/api/open?cat&id&fallback=1`로 지금 고른 SVG를 연결된 편집기로 연다. 수치 항목은 `_parts.json`. 열기는 한글·띄어쓰기 id도 받는다(`OPEN_RE`). 색 줄에는 없다(`.js`를 `start`로 열면 윈도우 스크립트로 실행되므로 일부러 뺐다).
+- `start.bat`(서버)로 열면 파츠 줄마다 **파일** 버튼이 붙는다: `/api/open?cat&id&fallback=1`로 지금 고른 SVG를 연결된 편집기로 연다. 수치 항목은 `_parts.json`. 열기는 한글·띄어쓰기 id도 받는다(`OPEN_RE`). SVG는 먼저 VectorCraft 제어 포트(7979, `VECTORCRAFT_CONTROL_PORT`)에 `{"method":"command","params":{"id":"file.open","params":{"path":…}}}`를 보내 **실행 중인 창의 탭으로** 연다(이미 열린 파일이면 그 탭으로 이동). VectorCraft가 꺼져 있으면 연결 프로그램으로 실행한다. 이유: SVG 연결 프로그램이 `vectorcraft.exe --control 7979 "%1"`인데, `--control`로 켠 창은 다른 실행에서 넘어온 파일을 받지 못해 매번 새 창이 뜬다(2026-11-13 확인: `--control` 없이 켠 창은 넘겨받는다). 색 줄에는 없다(`.js`를 `start`로 열면 윈도우 스크립트로 실행되므로 일부러 뺐다).
 
 - `parts/base/`: 항상 그려지는 것. `body`, `ear`, `nose`, `hair`(기본머리: `fill`/`cap`/`tuck`/`edge` 그룹), `guide`(헤어라인·흐름 가이드 선).
 - 각 폴더의 `_parts.json`: 화면 이름, 순서, 랜덤 비중(`w`), 기본값(`default`), 그 밖의 표시(`none`, `down`, `noCap`, `noRing`, 수치 항목의 값).

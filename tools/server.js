@@ -12,6 +12,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const { execFile } = require('child_process');
+const net = require('net');
 
 const ROOT = path.resolve(__dirname, '..');
 const PORT = Number(process.env.PORT) || 8765;
@@ -79,9 +80,31 @@ function svgPath(cat, id) {
   if (!ID_RE.test(id || '')) throw new Error('파일 이름은 영문, 숫자, -, _ 만 쓸 수 있습니다');
   return path.join(catDir(cat), id + '.svg');
 }
-function openWith(target) {
+// VectorCraft 가 제어 포트(--control 7979)를 켜고 실행 중이면 그 창에 연다.
+// 제어 포트를 켠 VectorCraft 는 다른 곳에서 연 파일을 넘겨받지 못해서, 그냥 실행하면 매번 새 창이 뜬다.
+// file.open 은 새 탭으로 열고, 이미 열린 파일이면 그 탭으로 옮겨 간다.
+const VC_PORT = Number(process.env.VECTORCRAFT_CONTROL_PORT) || 7979;
+function openInVectorCraft(file) {
+  return new Promise((resolve) => {
+    const sock = net.connect(VC_PORT, '127.0.0.1');
+    let buf = '', done = false;
+    const finish = (ok) => { if (done) return; done = true; sock.destroy(); resolve(ok); };
+    sock.setTimeout(3000, () => finish(false));
+    sock.on('error', () => finish(false));
+    sock.on('connect', () => sock.write(JSON.stringify({ id: 1, method: 'command', params: { id: 'file.open', params: { path: file } } }) + '\n'));
+    sock.on('data', (d) => {
+      buf += d;
+      const nl = buf.indexOf('\n');
+      if (nl < 0) return;
+      try { finish(!!JSON.parse(buf.slice(0, nl)).ok); } catch (e) { finish(false); }
+    });
+  });
+}
+async function openWith(target) {
+  if (/\.svg$/i.test(target) && await openInVectorCraft(target)) return 'vectorcraft';
   // 윈도우 기본 프로그램으로 연다 (SVG 는 연결된 편집기, 폴더는 탐색기)
   execFile('cmd', ['/c', 'start', '""', target], { windowsHide: true });
+  return 'start';
 }
 function readBody(req) {
   return new Promise((resolve, reject) => {
@@ -148,7 +171,7 @@ async function handleApi(url, q, req) {
     // 열기만 할 때는 한글·띄어쓰기 파일 이름도 받는다 (경로 문자와 cmd 특수문자는 막는다)
     if (!OPEN_RE.test(id)) throw new Error('열 수 없는 파일 이름입니다: ' + id);
     const f = path.join(catDir(cat), id + '.svg');
-    if (fs.existsSync(f)) { openWith(f); return { ok: true, opened: cat + '/' + id + '.svg' }; }
+    if (fs.existsSync(f)) { const how = await openWith(f); return { ok: true, opened: cat + '/' + id + '.svg' + (how === 'vectorcraft' ? ' (VectorCraft 창)' : '') }; }
     // 화면의 "파일" 버튼: 수치만 있는 항목은 그 폴더의 _parts.json 을 연다
     if (q.get('fallback')) {
       const entry = readEntries(cat).find((x) => x.id === id);
