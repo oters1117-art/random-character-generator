@@ -425,6 +425,7 @@ function entryBase(e) {
   if (e.none) p.none = true;
   // 목록에서 묶어 보여 줄 분류 이름 (화면의 선택 목록이 이 이름으로 나뉜다)
   if (e.group) p.group = e.group;
+  if (e.fantasy) p.fantasy = true;               // 현실 모드(건물 버튼)에서 랜덤에 안 나오는 선택지
   if (e.earringAt) p.earringAt = e.earringAt;   // 귀 모양: 귀걸이를 달 자리 (동물 귀)
   // 하이라이트: 그림 없이 눈동자의 동공을 흰색으로 칠한다 (core.js 의 eyeSide)
   if (e.pupilWhite) p.pupilWhite = true;

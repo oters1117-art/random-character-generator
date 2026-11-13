@@ -6,9 +6,9 @@
   {"id":"almond","name":"아몬드형","w":3},
   {"id":"cat","name":"고양이눈","w":2},
   {"id":"sharp","name":"길고 날카로운 눈","w":2},
-  {"id":"deformed","name":"크고 동그란 눈","w":2},
+  {"id":"deformed","name":"크고 동그란 눈","w":0.5},
   {"id":"sleepy","name":"졸린 눈","w":2},
-  {"id":"slit","name":"실눈","w":0.4},
+  {"id":"slit","name":"실눈","w":0.3},
   {"id":"smile","name":"반달 웃는 눈","w":0.7},
   {"id":"closed","name":"감은 눈","w":0.2},
   {"id":"fox","name":"여우눈","w":2}

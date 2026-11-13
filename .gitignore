@@ -9,3 +9,6 @@ parts/_trash/
 
 node_modules/
 out.svg
+
+# 주인의 참고 자료 (공개 저장소에 올리지 않음)
+자료/
