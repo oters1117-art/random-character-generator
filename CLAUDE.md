@@ -18,7 +18,9 @@
 
 화면(2026-11-13): PC는 카드 아래에 랜덤/이전/다음, PNG 저장/SVG 저장/**이미지 복사**("기본으로"는 뺌). 이미지 복사는 1024px PNG 왼쪽 위 구석에 `DOVEMAYO.COM`(대문자)을 둘기마요고딕(`fonts/dovemayo-gothic-latin.woff2`, 영문 대소문자·마침표만 뽑은 것)으로 작고 흐리게 적어 클립보드에 넣는다. 클립보드는 https나 localhost에서만 되고, 안 되면 같은 이미지를 파일로 저장한다. 휴대폰(760px 이하)은 얼굴 카드가 위에 붙고(sticky), 카드 아래 버튼·조합 코드는 숨기고 카드 위 아이콘 셋(왼쪽 위 랜덤, 오른쪽 위 이전·이미지 복사)만 쓴다. 항목은 한 줄에 하나(이름·선택·랜덤·고정, ‹ › 버튼 숨김). 안내 글은 카드 아래쪽에 잠깐 뜨는 토스트(`#status`).
 
-제안 게시판: `https://dovemayo.com/character/board/` (홈페이지 저장소의 `dist/character/board/index.html`과 `worker/index.mjs`. 방문자가 글과 이미지를 제출하면 검토 대기로 들어가고, 주인이 관리 링크로 연 브라우저에서 승인·삭제한다. 관리 링크는 `X:\AI\dovemayo-site\.sites-runtime\board-admin.txt`).
+자랑 게시판: `https://dovemayo.com/character/show/` (홈페이지 저장소 `dist/character/show/index.html`). 생성기의 "자랑하기"(PC 버튼, 휴대폰은 카드 오른쪽 위 아이콘)가 `#new=조합코드`로 보내면 한 줄 적어 올린다. 글은 조합 코드와 글만 저장하고 얼굴은 페이지가 코드로 그린다. 카드를 누르면 팝업(전체 글, 조합 코드, 코드 복사, 이미지 복사, 생성기에서 열기). 주인은 관리 링크를 연 브라우저에서 삭제.
+
+제안 게시판(제출 즉시 공개, 주인이 승인하면 아래 "검토한 제안"으로): `https://dovemayo.com/character/board/` (홈페이지 저장소의 `dist/character/board/index.html`과 `worker/index.mjs`. 방문자가 글과 이미지를 제출하면 검토 대기로 들어가고, 주인이 관리 링크로 연 브라우저에서 승인·삭제한다. 관리 링크는 `X:\AI\dovemayo-site\.sites-runtime\board-admin.txt`).
 
 git: 공개 저장소 `oters1117-art/random-character-generator`(브랜치 `main`). gh의 활성 계정은 다른 계정이라 `gh auth token -u oters1117-art` 토큰으로 푸시한다. `samples/`, `*.lnk`, `parts/_trash/`는 올리지 않는다(`.gitignore`). 사용자용 설명은 `README.md`, 화면 캡처는 `docs/`.
 
