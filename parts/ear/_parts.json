@@ -3,5 +3,6 @@
   {"id":"big","name":"큰 귀","w":1},
   {"id":"soft","name":"살짝 뾰족한 귀","w":1},
   {"id":"elf","name":"뾰족귀 (엘프)","w":0.6},
-  {"id":"cat","name":"고양이귀","w":0.6}
+  {"id":"cat","name":"cat"},
+  {"id":"fox","name":"fox"}
 ]

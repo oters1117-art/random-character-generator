@@ -4,5 +4,8 @@
   {"id":"hoop","name":"링"},
   {"id":"drop","name":"드롭"},
   {"id":"bar","name":"긴 바"},
-  {"id":"cuff","name":"이어커프","w":0.6}
+  {"id":"cuff","name":"이어커프","w":0.6},
+  {"id":"stud-mini-2","name":"stud-mini-2"},
+  {"id":"stud-mini","name":"stud-mini"},
+  {"id":"stud-big1-mini2","name":"stud-big1-mini2"}
 ]

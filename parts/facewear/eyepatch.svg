@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="702" height="702" viewBox="0 0 702 702">
   <defs>
-    <clipPath id="clip-path-5">
+    <clipPath id="clip-path-1">
       <path d="M242 410.88 L386 410.88 L386 514.17 L242 514.17 Z"/>
     </clipPath>
     <filter id="filter-1" filterUnits="userSpaceOnUse" x="245" y="377" width="138" height="100" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="9" color-interpolation-filters="linearRGB"/></filter>
-    <clipPath id="clip-path-6">
+    <clipPath id="clip-path-2">
       <path d="M460 410.88 L316 410.88 L316 514.17 L460 514.17 Z"/>
     </clipPath>
     <filter id="filter-2" filterUnits="userSpaceOnUse" x="319" y="377" width="138" height="100" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="9" color-interpolation-filters="linearRGB"/></filter>
-    <clipPath id="clip-path-7">
+    <clipPath id="clip-path-3">
       <path d="M242 370.99 C242 340.93 262 326 288 326 C314 326 334 340.93 334 370.99 C334 401.05 314 420.17 288 420.17 C262 420.17 242 401.05 242 370.99 Z"/>
     </clipPath>
-    <clipPath id="clip-path-8">
+    <clipPath id="clip-path-4">
       <path d="M460 370.99 C460 340.93 440 326 414 326 C388 326 368 340.93 368 370.99 C368 401.05 388 420.17 414 420.17 C440 420.17 460 401.05 460 370.99 Z"/>
     </clipPath>
   </defs>
@@ -69,12 +69,12 @@
         </g>
       </g>
       <g data-layer="makeup">
-        <g clip-path="url(#clip-path-5)">
+        <g clip-path="url(#clip-path-1)">
           <g filter="url(#filter-1)">
             <ellipse cx="314" cy="427" rx="40" ry="21" fill="#f3bfb8" opacity="0.5"/>
           </g>
         </g>
-        <g clip-path="url(#clip-path-6)">
+        <g clip-path="url(#clip-path-2)">
           <g filter="url(#filter-2)">
             <ellipse cx="388" cy="427" rx="40" ry="21" fill="#f3bfb8" opacity="0.5"/>
           </g>
@@ -87,7 +87,7 @@
       </g>
       <g data-layer="eye">
         <path d="M242 360 C242 338 262 326 288 326 C314 326 334 338 334 360 C334 382 314 396 288 396 C262 396 242 382 242 360 Z" fill="#ffffff"/>
-        <g clip-path="url(#clip-path-7)">
+        <g clip-path="url(#clip-path-3)">
           <g>
             <circle cx="292" cy="361" r="26" fill="#3e2a22"/>
             <circle cx="292" cy="361" r="17.42" fill="#7e5647"/>
@@ -100,7 +100,7 @@
         </g>
         <g>
           <path d="M460 360 C460 338 440 326 414 326 C388 326 368 338 368 360 C368 382 388 396 414 396 C440 396 460 382 460 360 Z" fill="#ffffff"/>
-          <g clip-path="url(#clip-path-8)">
+          <g clip-path="url(#clip-path-4)">
             <g>
               <circle cx="410" cy="361" r="26" fill="#3e2a22"/>
               <circle cx="410" cy="361" r="17.42" fill="#7e5647"/>
@@ -124,7 +124,21 @@
     </g>
   </g>
   <g id="full">
-    <path d="M240 330 C226 318 212 306 198 298 M336 328 C390 300 450 280 506 268 M238 394 C228 400 220 404 212 408" fill="none" stroke="#b5adad" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="234" y="316" width="108" height="90" rx="20" fill="#ffffff" stroke="#b5adad" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M232.462 355.432 C231.215 346.688 230.141 339.212 235.08 333.634 C241.879 325.955 250.66 326.753 260.112 325.679 C278.741 323.561 304.508 320.719 319.321 321.919 C328.79 322.686 332.558 325.088 334.853 332.279 C337.535 340.68 337.69 350.93 338.646 359.665 C339.269 365.36 339.908 371.053 340.406 376.806 C341.17 385.623 342.727 398.478 335.274 403.945 C331.096 407.01 322.588 407.062 317.544 407.356 C304.818 408.099 283.731 408.748 268.969 409.678 C263.886 409.998 255.625 411.689 249.139 411.274 C238.371 410.585 237.757 404.124 236.888 395.325 C235.595 382.223 234.316 368.443 232.462 355.432 Z" fill="#ffffff" stroke="#b5adad" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M205.159 349.923 L204.659 349.423 C209.748 349.423 219.854 345.653 225.03 343.968 C225.747 343.734 230.518 342.714 230.409 342.173" fill="none" stroke="#b5adad" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M236.659 393.423 C235.835 395.345 227.079 455.602 227.159 455.923 L227.659 455.423" fill="none" stroke="#b5adad" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M335.159 329.013 C337.599 330.476 473.374 295.013 487.659 295.013 L487.159 295.013 L487.659 295.013 L487.159 295.013" fill="none" stroke="#b5adad" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <ellipse cx="253.826" cy="348.388" rx="2.667" ry="2.75" fill="#e0d6d6"/>
+    <ellipse cx="255.992" cy="369.054" rx="2.667" ry="2.75" fill="#e0d6d6"/>
+    <ellipse cx="258.159" cy="389.888" rx="2.667" ry="2.75" fill="#e0d6d6"/>
+    <ellipse cx="273.742" cy="346.054" rx="2.667" ry="2.75" fill="#e0d6d6"/>
+    <ellipse cx="276.076" cy="367.721" rx="2.667" ry="2.75" fill="#e0d6d6"/>
+    <ellipse cx="278.909" cy="388.804" rx="2.667" ry="2.75" fill="#e0d6d6"/>
+    <ellipse cx="294.159" cy="345.554" rx="2.667" ry="2.75" fill="#e0d6d6"/>
+    <ellipse cx="296.159" cy="365.721" rx="2.667" ry="2.75" fill="#e0d6d6"/>
+    <ellipse cx="299.159" cy="386.888" rx="2.667" ry="2.75" fill="#e0d6d6"/>
+    <ellipse cx="315.159" cy="342.888" rx="2.667" ry="2.75" fill="#e0d6d6"/>
+    <ellipse cx="317.326" cy="364.304" rx="2.667" ry="2.75" fill="#e0d6d6"/>
+    <ellipse cx="319.492" cy="384.388" rx="2.667" ry="2.75" fill="#e0d6d6"/>
   </g>
 </svg>

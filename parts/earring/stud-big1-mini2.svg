@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="702" height="702" viewBox="0 0 702 702">
   <defs>
-    <clipPath id="clip-path-5">
+    <clipPath id="clip-path-1">
       <path d="M242 410.88 L386 410.88 L386 514.17 L242 514.17 Z"/>
     </clipPath>
     <filter id="filter-1" filterUnits="userSpaceOnUse" x="245" y="377" width="138" height="100" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="9" color-interpolation-filters="linearRGB"/></filter>
-    <clipPath id="clip-path-6">
+    <clipPath id="clip-path-2">
       <path d="M460 410.88 L316 410.88 L316 514.17 L460 514.17 Z"/>
     </clipPath>
     <filter id="filter-2" filterUnits="userSpaceOnUse" x="319" y="377" width="138" height="100" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="9" color-interpolation-filters="linearRGB"/></filter>
-    <clipPath id="clip-path-7">
+    <clipPath id="clip-path-3">
       <path d="M242 370.99 C242 340.93 262 326 288 326 C314 326 334 340.93 334 370.99 C334 401.05 314 420.17 288 420.17 C262 420.17 242 401.05 242 370.99 Z"/>
     </clipPath>
-    <clipPath id="clip-path-8">
+    <clipPath id="clip-path-4">
       <path d="M460 370.99 C460 340.93 440 326 414 326 C388 326 368 340.93 368 370.99 C368 401.05 388 420.17 414 420.17 C440 420.17 460 401.05 460 370.99 Z"/>
     </clipPath>
   </defs>
-  <title>eyepatchblack.svg</title>
+  <title>stud-2.svg</title>
   <g id="_ref">
     <g opacity="0.5">
       <rect x="0" y="0" width="702" height="702" fill="#ada19f"/>
@@ -50,12 +50,12 @@
       </g>
       <g data-layer="ear">
         <g>
-          <path d="M215 352 C200 350 186 362 180 380 C175 398 180 425 200 441 C212 449 226 453 238 455 L225 380 Z" fill="#fdeeea"/>
-          <path d="M215 352 C200 350 186 362 180 380 C175 398 180 425 200 441 C212 449 226 453 238 455" fill="none" stroke="#b46352" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M217 357 C202 355 188 367 182 385 C177 403 182 430 202 446 C214 454 228 458 240 460 L227 385 Z" fill="#fdeeea"/>
+          <path d="M217 357 C202 355 188 367 182 385 C177 403 182 430 202 446 C214 454 228 458 240 460" fill="none" stroke="#b46352" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
         </g>
         <g>
-          <path d="M487 352 C502 350 516 362 522 380 C527 398 522 425 502 441 C490 449 476 453 464 455 L477 380 Z" fill="#fdeeea"/>
-          <path d="M487 352 C502 350 516 362 522 380 C527 398 522 425 502 441 C490 449 476 453 464 455" fill="none" stroke="#b46352" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M489 357 C504 355 518 367 524 385 C529 403 524 430 504 446 C492 454 478 458 466 460 L479 385 Z" fill="#fdeeea"/>
+          <path d="M489 357 C504 355 518 367 524 385 C529 403 524 430 504 446 C492 454 478 458 466 460" fill="none" stroke="#b46352" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
         </g>
       </g>
       <g data-layer="face">
@@ -69,12 +69,12 @@
         </g>
       </g>
       <g data-layer="makeup">
-        <g clip-path="url(#clip-path-5)">
+        <g clip-path="url(#clip-path-1)">
           <g filter="url(#filter-1)">
             <ellipse cx="314" cy="427" rx="40" ry="21" fill="#f3bfb8" opacity="0.5"/>
           </g>
         </g>
-        <g clip-path="url(#clip-path-6)">
+        <g clip-path="url(#clip-path-2)">
           <g filter="url(#filter-2)">
             <ellipse cx="388" cy="427" rx="40" ry="21" fill="#f3bfb8" opacity="0.5"/>
           </g>
@@ -87,7 +87,7 @@
       </g>
       <g data-layer="eye">
         <path d="M242 360 C242 338 262 326 288 326 C314 326 334 338 334 360 C334 382 314 396 288 396 C262 396 242 382 242 360 Z" fill="#ffffff"/>
-        <g clip-path="url(#clip-path-7)">
+        <g clip-path="url(#clip-path-3)">
           <g>
             <circle cx="292" cy="361" r="26" fill="#3e2a22"/>
             <circle cx="292" cy="361" r="17.42" fill="#7e5647"/>
@@ -100,7 +100,7 @@
         </g>
         <g>
           <path d="M460 360 C460 338 440 326 414 326 C388 326 368 338 368 360 C368 382 388 396 414 396 C440 396 460 382 460 360 Z" fill="#ffffff"/>
-          <g clip-path="url(#clip-path-8)">
+          <g clip-path="url(#clip-path-4)">
             <g>
               <circle cx="410" cy="361" r="26" fill="#3e2a22"/>
               <circle cx="410" cy="361" r="17.42" fill="#7e5647"/>
@@ -123,8 +123,9 @@
       </g>
     </g>
   </g>
-  <g id="full">
-    <path d="M186 300 C280 318 420 300 514 262" fill="none" stroke="#17171a" stroke-width="9" stroke-linecap="round"/>
-    <path d="M236 322 C262 312 314 312 340 322 C344 356 330 398 288 408 C246 398 232 356 236 322 Z" fill="#34343a" stroke="#17171a" stroke-width="5" stroke-linejoin="round"/>
+  <g id="half">
+    <circle cx="215.448" cy="438.698" r="5.281" fill="#d8433b" stroke="#6f2420" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="194.443" cy="380.984" r="3.5" fill="#6f2420"/>
+    <circle cx="190.276" cy="391.817" r="3.5" fill="#6f2420"/>
   </g>
 </svg>

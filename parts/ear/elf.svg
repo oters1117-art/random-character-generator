@@ -124,8 +124,7 @@
     </g>
   </g>
   <g id="half">
-    <path d="M215 356 C196 346 160 326 116 304 C136 336 158 362 176 386 C175 402 181 426 200 441 C212 449 226 453 238 455 L225 380 Z" fill="#fdeeea"/>
-    <path d="M215 356 C196 346 160 326 116 304 C136 336 158 362 176 386 C175 402 181 426 200 441 C212 449 226 453 238 455" fill="none" stroke="#b46352" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M150 326 C168 340 186 356 200 372" fill="none" stroke="#b46352" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M375.667 309 C356.667 299 320.667 279 276.667 257 C296.667 289 318.667 315 336.667 339 C335.667 355 341.667 379 360.667 394 C372.667 402 386.667 406 398.667 408 L385.667 333 Z" fill="#fdeeea"/>
+    <path d="M215.043 356.141 C212.776 351.607 174.043 331.808 159.703 341.601 C150.628 347.799 158.971 379.732 161.914 388.382 C170.35 413.184 197.043 450.808 234.752 454.368" fill="#fdeeea" stroke="#b46352" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>
