@@ -425,6 +425,7 @@ function entryBase(e) {
   if (e.none) p.none = true;
   // 목록에서 묶어 보여 줄 분류 이름 (화면의 선택 목록이 이 이름으로 나뉜다)
   if (e.group) p.group = e.group;
+  if (e.earringAt) p.earringAt = e.earringAt;   // 귀 모양: 귀걸이를 달 자리 (동물 귀)
   // 하이라이트: 그림 없이 눈동자의 동공을 흰색으로 칠한다 (core.js 의 eyeSide)
   if (e.pupilWhite) p.pupilWhite = true;
   return p;
