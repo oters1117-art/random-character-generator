@@ -7,7 +7,6 @@
     <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="9"/></filter>
   </defs>
   <g id="half">
-    <ellipse cx="314" cy="427" rx="40" ry="21" fill="#f3bfb8" opacity=".5" filter="url(#soft)"/>
     <ellipse cx="270" cy="384" rx="34" ry="16" fill="#dc6450" opacity=".3" filter="url(#soft)"/>
   </g>
 </svg>

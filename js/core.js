@@ -56,11 +56,11 @@
     { key: 'iris', code: 'i', name: '눈동자 크기', group: 'eyes', sub: 'iris', type: 'eye' },
     { key: 'pupil', code: 'p', name: '눈동자 무늬', group: 'eyes', sub: 'iris', type: 'eye' },
     { key: 'hl', code: 'h', name: '하이라이트', group: 'eyes', sub: 'iris', type: 'eye' },
-    { key: 'aegyo', code: 'y', name: '애교살', group: 'eyes', sub: 'under', type: 'eye' },
-    { key: 'dark', code: 'z', name: '다크서클', group: 'eyes', sub: 'under', type: 'eye' },
     { key: 'face', code: 'f', name: '얼굴형', group: 'face' },
     { key: 'skinfx', code: 's', name: '피부특징', group: 'face', noneWeight: 0.6 },
     { key: 'makeup', code: 'k', name: '볼터치', group: 'face', noneWeight: 0.25 },
+    // 눈가: 눈 밑 섀도(그림) / 애교살 / 다크서클(엔진이 아래 라인을 따라 그림) 중 하나만
+    { key: 'around', code: 'ey', name: '눈가', group: 'face' },
     { key: 'lip', code: 'kl', name: '립', group: 'face', noneWeight: 0.5 },
     { key: 'brow', code: 'b', name: '눈썹', group: 'face' },
     { key: 'mouth', code: 'm', name: '입', group: 'face' },
@@ -82,8 +82,7 @@
   var SUBS = [
     { key: 'eye', group: 'eyes', name: '눈 모양' },
     { key: 'lash', group: 'eyes', name: '속눈썹' },
-    { key: 'iris', group: 'eyes', name: '눈동자' },
-    { key: 'under', group: 'eyes', name: '애교살 · 다크서클' }
+    { key: 'iris', group: 'eyes', name: '눈동자' }
   ];
 
   // 화면 순서: [{ group, sub, items: [항목 또는 색 슬롯] }]
@@ -629,7 +628,7 @@
       var p = part(c.key);
       if (!p || p.none || !p.pieces) return;
       // 눈 높이·간격은 눈썹과 안경에도, 입 높이는 입과 립에도 같이 적용한다
-      var tf = c.key === 'brow' ? [-adj.gap, adj.eyeY] : c.key === 'glasses' ? [0, adj.eyeY] : (c.key === 'mouth' || c.key === 'lip') ? [0, adj.mouthY] : null;
+      var tf = (c.key === 'brow' || c.key === 'around') ? [-adj.gap, adj.eyeY] : c.key === 'glasses' ? [0, adj.eyeY] : (c.key === 'mouth' || c.key === 'lip') ? [0, adj.mouthY] : null;
       for (var l in p.pieces) {
         var pc = p.pieces[l];
         if (tf && (tf[0] || tf[1])) {
@@ -648,7 +647,11 @@
       var iris = findIn(parts.iris, s.iris), pupil = findIn(parts.pupil, s.pupil);
       var hl = findIn(parts.hl, s.hl);
       var opt = {};
-      ['lash', 'fold', 'lowline', 'lowlash', 'aegyo', 'dark'].forEach(function (k) { opt[k] = findIn(parts[k], s[k]); });
+      ['lash', 'fold', 'lowline', 'lowlash'].forEach(function (k) { opt[k] = findIn(parts[k], s[k]); });
+      // 애교살·다크서클은 "눈가" 항목에서 하나만 고른다 (kind 로 구분)
+      var around = omit.around ? null : findIn(parts.around, s.around);
+      opt.aegyo = around && around.kind === 'aegyo' ? around : null;
+      opt.dark = around && around.kind === 'dark' ? around : null;
       var right = (eye.alt && findIn(parts.eye, eye.alt)) || eye;
       if (eye.white) defs += '<clipPath id="cg-eye@@">' + eye.white + '</clipPath>';
       if (right !== eye && right.white) defs += '<clipPath id="cg-eye2@@">' + right.white + '</clipPath>';

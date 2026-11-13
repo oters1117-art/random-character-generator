@@ -83,9 +83,9 @@ const LAYERS = ['hairBack', 'body', 'hairMid', 'hairBase', 'ear', 'face', 'skin'
 // 항목 -> 기본 레이어. 여기 없는 항목(eye, pupil, hl, lash, iris)은 따로 처리한다.
 const GENERIC = {
   front: 'hairFront', extra: 'hairFront', side: 'hairSide', back: 'hairMid', face: 'face', skinfx: 'skin',
-  makeup: 'makeup', lip: 'makeup', brow: 'brow', mouth: 'mouth', acc: 'acc', glasses: 'glasses'
+  makeup: 'makeup', around: 'makeup', lip: 'makeup', brow: 'brow', mouth: 'mouth', acc: 'acc', glasses: 'glasses'
 };
-const CATEGORIES = ['front', 'extra', 'side', 'back', 'face', 'skinfx', 'makeup', 'lip', 'eye', 'iris', 'pupil', 'hl', 'lash', 'fold', 'lowline', 'lowlash', 'aegyo', 'dark',
+const CATEGORIES = ['front', 'extra', 'side', 'back', 'face', 'skinfx', 'makeup', 'lip', 'eye', 'iris', 'pupil', 'hl', 'lash', 'fold', 'lowline', 'lowlash', 'around',
   'brow', 'mouth', 'eyeGap', 'eyeY', 'eyeSize', 'mouthY', 'acc', 'glasses'];
 
 const PIECE_NAMES = {};
@@ -93,7 +93,7 @@ const PIECE_NAMES = {};
 LAYERS.forEach((l) => ['half', 'full'].forEach((s) => { PIECE_NAMES[(l + '-' + s).toLowerCase()] = l + '-' + s; }));
 const MARKERS = { iris: 1 };
 // 그림 없이 _parts.json 의 수치만 쓰는 항목 (눈동자 크기, 아이라인에서 만드는 것들)
-const DATA_ONLY = { iris: 1, lash: 1, fold: 1, lowline: 1, lowlash: 1, aegyo: 1, dark: 1, eyeGap: 1, eyeY: 1, eyeSize: 1, mouthY: 1 };
+const DATA_ONLY = { iris: 1, lash: 1, fold: 1, lowline: 1, lowlash: 1, eyeGap: 1, eyeY: 1, eyeSize: 1, mouthY: 1 };
 
 const warnings = [];
 const notes = [];
@@ -425,7 +425,11 @@ function buildCategory(cat) {
       for (const k of Object.keys(e)) if (['id', 'name', 'w', 'default', 'none'].indexOf(k) < 0) p[k] = e[k];
       out.push(p); continue;
     }
-    if (e.none || e.empty) { out.push(p); continue; }
+    if (e.none || e.empty) {
+      // empty: 그림 없이 수치만 있는 선택지 (눈가의 애교살·다크서클 등). 적힌 값을 그대로 넘긴다
+      if (e.empty) for (const k of Object.keys(e)) if (['id', 'name', 'w', 'default', 'none', 'empty'].indexOf(k) < 0) p[k] = e[k];
+      out.push(p); continue;
+    }
 
     const file = path.join(PARTS, cat, e.id + '.svg');
     if (!fs.existsSync(file)) { warn('parts/' + cat + '/' + e.id + '.svg 가 없어서 건너뜁니다'); continue; }

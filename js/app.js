@@ -5,8 +5,8 @@
   var HISTORY_MAX = 100;
 
   var state = CG.defaultState();
-  // 얼굴형은 둥근형으로 고정한 채 시작한다 (고정 버튼을 풀면 랜덤에 포함된다)
-  var locks = { face: true };
+  // 얼굴형(둥근형)과 피부색(기본)은 고정한 채 시작한다 (고정 버튼을 풀면 랜덤에 포함된다)
+  var locks = { face: true, skinColor: true };
   var history = [];
   var cursor = -1;
   var controls = {}; // key -> 화면 갱신 함수

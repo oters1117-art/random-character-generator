@@ -57,7 +57,7 @@ try {
 
 // ---------------------------------------------------------------- 항목 편집
 const PARTS = path.join(ROOT, 'parts');
-const DATA_ONLY = { iris: 1, lash: 1, fold: 1, lowline: 1, lowlash: 1, aegyo: 1, dark: 1, eyeGap: 1, eyeY: 1, eyeSize: 1, mouthY: 1 };
+const DATA_ONLY = { iris: 1, lash: 1, fold: 1, lowline: 1, lowlash: 1, eyeGap: 1, eyeY: 1, eyeSize: 1, mouthY: 1 };
 const ID_RE = /^[A-Za-z0-9_-]+$/;
 const OPEN_RE = /^[\p{L}\p{N}_ -]+$/u;
 
@@ -151,7 +151,8 @@ async function handleApi(url, q, req) {
     if (fs.existsSync(f)) { openWith(f); return { ok: true, opened: cat + '/' + id + '.svg' }; }
     // 화면의 "파일" 버튼: 수치만 있는 항목은 그 폴더의 _parts.json 을 연다
     if (q.get('fallback')) {
-      if (DATA_ONLY[cat]) { openWith(path.join(catDir(cat), '_parts.json')); return { ok: true, opened: cat + '/_parts.json' }; }
+      const entry = readEntries(cat).find((x) => x.id === id);
+      if (DATA_ONLY[cat] || (entry && entry.empty)) { openWith(path.join(catDir(cat), '_parts.json')); return { ok: true, opened: cat + '/_parts.json' }; }
       throw new Error('"' + id + '" 은(는) 그림 파일이 없는 항목입니다 (없음 등)');
     }
     throw new Error(id + '.svg 가 없습니다');
