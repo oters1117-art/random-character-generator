@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="702" height="702" viewBox="0 0 702 702">
   <defs>
-    <clipPath id="clip-path-5">
+    <clipPath id="clip-path-1">
       <path d="M242 389.2 L386 389.2 L386 464.8 L242 464.8 Z"/>
     </clipPath>
     <filter id="filter-1" filterUnits="userSpaceOnUse" x="245" y="377" width="138" height="100" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="9" color-interpolation-filters="linearRGB"/></filter>
-    <clipPath id="clip-path-6">
+    <clipPath id="clip-path-2">
       <path d="M460 389.2 L316 389.2 L316 464.8 L460 464.8 Z"/>
     </clipPath>
     <filter id="filter-2" filterUnits="userSpaceOnUse" x="319" y="377" width="138" height="100" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="9" color-interpolation-filters="linearRGB"/></filter>
-    <clipPath id="clip-path-7">
+    <clipPath id="clip-path-3">
       <path d="M242 360 C242 338 262 326 288 326 C314 326 334 338 334 360 C334 382 314 396 288 396 C262 396 242 382 242 360 Z"/>
     </clipPath>
-    <clipPath id="clip-path-8">
+    <clipPath id="clip-path-4">
       <path d="M460 360 C460 338 440 326 414 326 C388 326 368 338 368 360 C368 382 388 396 414 396 C440 396 460 382 460 360 Z"/>
     </clipPath>
   </defs>
-  <title>horn.svg</title>
+  <title>roll.svg</title>
   <g id="_ref">
     <g opacity="0.5">
       <rect x="0" y="0" width="702" height="702" fill="#ada19f"/>
@@ -34,20 +34,6 @@
           <path d="M472 582 C519 596 569 625 611 672 L638 706" fill="none" stroke="#b46352" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M406 500 C404 510 404 516 404 522 C399 540 401 556 419 566 C434 573 454 578 472 582" fill="none" stroke="#b46352" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M442 572 C437 605 406 641 351 643" fill="none" stroke="#b46352" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-        </g>
-      </g>
-      <g data-layer="hairMid">
-        <g>
-          <path d="M190 424 C160 424 128 450 116 500 C108 540 103 590 102 636 L118 618 L132 644 L150 620 L166 646 L184 622 L200 644 L216 622 L234 640 C238 600 238 550 232 505 C226 470 212 436 190 424 Z" fill="#5d4e48"/>
-          <path d="M190 424 C160 424 128 450 116 500 C108 540 103 590 102 636 L118 618 L132 644 L150 620 L166 646 L184 622 L200 644 L216 622 L234 640 C238 600 238 550 232 505 C226 470 212 436 190 424 Z" fill="none" stroke="#352a27" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-          <line x1="150" y1="620" x2="150" y2="594" fill="none" stroke="#352a27" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          <line x1="184" y1="622" x2="184" y2="596" fill="none" stroke="#352a27" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-        </g>
-        <g>
-          <path d="M512 424 C542 424 574 450 586 500 C594 540 599 590 600 636 L584 618 L570 644 L552 620 L536 646 L518 622 L502 644 L486 622 L468 640 C464 600 464 550 470 505 C476 470 490 436 512 424 Z" fill="#5d4e48"/>
-          <path d="M512 424 C542 424 574 450 586 500 C594 540 599 590 600 636 L584 618 L570 644 L552 620 L536 646 L518 622 L502 644 L486 622 L468 640 C464 600 464 550 470 505 C476 470 490 436 512 424 Z" fill="none" stroke="#352a27" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-          <line x1="552" y1="620" x2="552" y2="594" fill="none" stroke="#352a27" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          <line x1="518" y1="622" x2="518" y2="596" fill="none" stroke="#352a27" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
         </g>
       </g>
       <g data-layer="hairBase">
@@ -83,12 +69,12 @@
         </g>
       </g>
       <g data-layer="makeup">
-        <g clip-path="url(#clip-path-5)">
+        <g clip-path="url(#clip-path-1)">
           <g filter="url(#filter-1)">
             <ellipse cx="314" cy="427" rx="40" ry="21" fill="#f3bfb8" opacity="0.5"/>
           </g>
         </g>
-        <g clip-path="url(#clip-path-6)">
+        <g clip-path="url(#clip-path-2)">
           <g filter="url(#filter-2)">
             <ellipse cx="388" cy="427" rx="40" ry="21" fill="#f3bfb8" opacity="0.5"/>
           </g>
@@ -101,7 +87,7 @@
       </g>
       <g data-layer="eye">
         <path d="M242 360 C242 338 262 326 288 326 C314 326 334 338 334 360 C334 382 314 396 288 396 C262 396 242 382 242 360 Z" fill="#ffffff"/>
-        <g clip-path="url(#clip-path-7)">
+        <g clip-path="url(#clip-path-3)">
           <g>
             <circle cx="292" cy="361" r="26" fill="#3e2a22"/>
             <circle cx="292" cy="361" r="17.42" fill="#7e5647"/>
@@ -114,7 +100,7 @@
         </g>
         <g>
           <path d="M460 360 C460 338 440 326 414 326 C388 326 368 338 368 360 C368 382 388 396 414 396 C440 396 460 382 460 360 Z" fill="#ffffff"/>
-          <g clip-path="url(#clip-path-8)">
+          <g clip-path="url(#clip-path-4)">
             <g>
               <circle cx="410" cy="361" r="26" fill="#3e2a22"/>
               <circle cx="410" cy="361" r="17.42" fill="#7e5647"/>
@@ -131,27 +117,13 @@
         <path d="M351 200 C322 200 296 208 278 228 C262 246 250 272 240 298 C232 318 223 340 214 358" fill="none" stroke="#352a27" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M351 200 C380 200 406 208 424 228 C440 246 452 272 462 298 C470 318 479 340 488 358" fill="none" stroke="#352a27" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
       </g>
-      <g data-layer="hairFront">
-        <g>
-          <path d="M240 298 C244.4 310 251.733 318 262 322 C273.2 307.333 281.2 278 286 234 C290 281 296.667 312.333 306 328 C315.333 326.533 322 323.533 326 319 C331 328.533 339.333 334.867 351 338 L352 338 L352 150 L200 250 Z" fill="#5d4e48"/>
-          <path d="M240 298 C244.4 310 251.733 318 262 322 C273.2 307.333 281.2 278 286 234 C290 281 296.667 312.333 306 328 C315.333 326.533 322 323.533 326 319 C331 328.533 339.333 334.867 351 338" fill="none" stroke="#352a27" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-        </g>
-        <g>
-          <path d="M462 298 C457.6 310 450.267 318 440 322 C428.8 307.333 420.8 278 416 234 C412 281 405.333 312.333 396 328 C386.667 326.533 380 323.533 376 319 C371 328.533 362.667 334.867 351 338 L350 338 L350 150 L502 250 Z" fill="#5d4e48"/>
-          <path d="M462 298 C457.6 310 450.267 318 440 322 C428.8 307.333 420.8 278 416 234 C412 281 405.333 312.333 396 328 C386.667 326.533 380 323.533 376 319 C371 328.533 362.667 334.867 351 338" fill="none" stroke="#352a27" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-        </g>
-      </g>
       <g data-layer="brow">
         <polyline points="243,297 256,293 291,292" fill="none" stroke="#352a27" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
         <polyline points="459,297 446,293 411,292" fill="none" stroke="#352a27" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
       </g>
     </g>
   </g>
-  <g id="full">
-    <path d="M250.191 322.878 C274.814 320.093 294.148 319.093 316.191 321.545 C324.849 322.508 337.814 336.426 339.804 340.878 C346.356 355.537 341.481 384.093 330.804 398.878 C317.481 414.426 307.804 419.211 282.804 419.211 C256.804 419.211 241.481 409.093 234.804 394.211 C226.481 376.426 223.814 360.426 226.858 347.545 C229.258 337.39 240.745 323.946 250.191 322.878 Z" fill="#ffffff" fill-opacity="0.16" stroke="#3a3336" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M382.862 322.878 C407.485 320.093 426.818 319.093 448.862 321.545 C457.52 322.508 470.485 336.426 472.474 340.878 C479.026 355.537 474.152 384.093 463.474 398.878 C450.152 414.426 440.474 419.211 415.474 419.211 C389.474 419.211 374.152 409.093 367.474 394.211 C359.152 376.426 356.485 360.426 359.529 347.545 C361.928 337.39 373.415 323.946 382.862 322.878 Z" fill="#ffffff" fill-opacity="0.16" stroke="#3a3336" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M336.46 336.197 C343.878 331.197 357.064 331.197 364.481 336.197" fill="none" stroke="#3a3336" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-    <line x1="225.804" y1="352.545" x2="205.804" y2="350.545" fill="none" stroke="#3a3336" stroke-width="12" stroke-linecap="round"/>
-    <line x1="496.196" y1="350.545" x2="476.196" y2="352.545" fill="none" stroke="#3a3336" stroke-width="12" stroke-linecap="round"/>
+  <g id="hairLine-half">
+    <path d="M195.798 304.655 C187.943 335.711 195.08 369.935 195.08 385.506 C195.08 401.4 184.788 410.523 189.289 427.362 C191.689 436.343 194.785 443.576 203.344 448.894 C215.953 456.73 221.376 479.117 214.839 492.19 C210.749 500.371 205.814 499.058 200.46 504.106 C187.913 515.939 184.914 531.958 192.302 546.958 C193.483 549.356 208.394 561.24 212.124 565.3 C221.042 575.008 210.486 595.941 196.203 595.658 C195.491 595.644 189.475 595.659 190.05 594.221 L190.05 594.94 L190.05 594.221 C206.253 600.453 225.258 595.416 225.258 575.539 C225.258 561.17 222.461 557.179 212.863 547.337 C206.391 540.7 200.231 539.535 203.848 528.459 C205.64 522.97 219.249 508.135 223.62 503.919 C238.074 489.976 233.216 467.566 225.258 451.234 C220.876 442.241 207.767 434.53 205.118 425.631 C200.816 411.175 214.046 389.602 216.636 374.352 C217.058 371.866 214.943 359.048 219.624 337.568" fill="#5d4e48" stroke="#2b201d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>

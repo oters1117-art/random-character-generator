@@ -13,11 +13,10 @@
   {"id":"flipoutlong","name":"어깨 바깥 뻗침","w":1},
   {"id":"wave","name":"웨이브","w":1.5},
   {"id":"wavelong","name":"긴 웨이브","w":1},
-  {"id":"drill","name":"롤 (드릴)","w":0.7},
-  {"id":"drilllong","name":"긴 롤 (드릴)","w":0.7},
   {"id":"braid","name":"땋은 옆머리","w":0.7},
   {"id":"braidlong","name":"긴 땋은 옆머리","w":0.7},
   {"id":"spike","name":"뾰족 스파이크","w":1},
   {"id":"spikelong","name":"긴 스파이크","w":1},
-  {"id":"tied","name":"끝을 묶은 옆머리","w":1}
+  {"id":"tied","name":"끝을 묶은 옆머리","w":1},
+  {"id":"roll","name":"롤"}
 ]

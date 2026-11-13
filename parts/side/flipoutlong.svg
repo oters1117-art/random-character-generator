@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="702" height="702" viewBox="0 0 702 702">
   <defs>
-    <clipPath id="clip-path-1">
+    <clipPath id="clip-path-5">
       <path d="M242 433.81 L386 433.81 L386 566.39 L242 566.39 Z"/>
     </clipPath>
     <filter id="filter-1" filterUnits="userSpaceOnUse" x="245" y="377" width="138" height="100" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="9" color-interpolation-filters="linearRGB"/></filter>
-    <clipPath id="clip-path-2">
+    <clipPath id="clip-path-6">
       <path d="M460 433.81 L316 433.81 L316 566.39 L460 566.39 Z"/>
     </clipPath>
     <filter id="filter-2" filterUnits="userSpaceOnUse" x="319" y="377" width="138" height="100" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="9" color-interpolation-filters="linearRGB"/></filter>
-    <clipPath id="clip-path-3">
+    <clipPath id="clip-path-7">
       <path d="M242 382.61 C242 344.03 262 326 288 326 C314 326 334 344.03 334 382.61 C334 421.19 314 445.74 288 445.74 C262 445.74 242 421.19 242 382.61 Z"/>
     </clipPath>
-    <clipPath id="clip-path-4">
+    <clipPath id="clip-path-8">
       <path d="M460 382.61 C460 344.03 440 326 414 326 C388 326 368 344.03 368 382.61 C368 421.19 388 445.74 414 445.74 C440 445.74 460 421.19 460 382.61 Z"/>
     </clipPath>
   </defs>
@@ -69,12 +69,12 @@
         </g>
       </g>
       <g data-layer="makeup">
-        <g clip-path="url(#clip-path-1)">
+        <g clip-path="url(#clip-path-5)">
           <g filter="url(#filter-1)">
             <ellipse cx="314" cy="427" rx="40" ry="21" fill="#f3bfb8" opacity="0.5"/>
           </g>
         </g>
-        <g clip-path="url(#clip-path-2)">
+        <g clip-path="url(#clip-path-6)">
           <g filter="url(#filter-2)">
             <ellipse cx="388" cy="427" rx="40" ry="21" fill="#f3bfb8" opacity="0.5"/>
           </g>
@@ -87,7 +87,7 @@
       </g>
       <g data-layer="eye">
         <path d="M242 360 C242 338 262 326 288 326 C314 326 334 338 334 360 C334 382 314 396 288 396 C262 396 242 382 242 360 Z" fill="#ffffff"/>
-        <g clip-path="url(#clip-path-3)">
+        <g clip-path="url(#clip-path-7)">
           <g>
             <circle cx="292" cy="361" r="26" fill="#3e2a22"/>
             <circle cx="292" cy="361" r="17.42" fill="#7e5647"/>
@@ -100,7 +100,7 @@
         </g>
         <g>
           <path d="M460 360 C460 338 440 326 414 326 C388 326 368 338 368 360 C368 382 388 396 414 396 C440 396 460 382 460 360 Z" fill="#ffffff"/>
-          <g clip-path="url(#clip-path-4)">
+          <g clip-path="url(#clip-path-8)">
             <g>
               <circle cx="410" cy="361" r="26" fill="#3e2a22"/>
               <circle cx="410" cy="361" r="17.42" fill="#7e5647"/>
@@ -124,6 +124,6 @@
     </g>
   </g>
   <g id="half">
-    <path d="M176.398 266.57 C168.642 283.81 165.452 351.97 169 384.72 C170.846 401.77 166.102 465.53 163.237 483.6 C158.935 510.75 150.744 564.02 131.131 564.02 C142.148 572.07 161.178 558.24 170.6 548.22 C174.968 543.57 184.887 514.26 184.302 506.06 C185.422 513.92 173.744 546.24 169.691 551.74 C169.278 552.31 164.814 555.96 164.814 556.65 C164.814 558.68 170.541 557.85 171.874 557.81 C194.66 557.06 209.706 526.29 215.917 490.94 C224.614 441.44 220.638 380.24 227.896 328.73 C228.522 326.15 233.176 311.54 234.599 310.4" fill="#5d4e48" stroke="#2b201d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M214.48 194.002 C210.591 195.73 204.554 204.479 198.58 214.955 C176.785 253.172 169.868 284.348 168.044 328.31 C167.793 334.351 167.637 340.434 167.581 346.378 C167.22 384.234 169.63 415.158 166.385 454.082 C165.334 466.685 164.183 477.633 163.237 483.6 C158.935 510.75 150.744 564.02 131.131 564.02 C142.148 572.07 161.178 558.24 170.6 548.22 C174.968 543.57 184.887 514.26 184.302 506.06 C185.422 513.92 173.744 546.24 169.691 551.74 C169.278 552.31 164.814 555.96 164.814 556.65 C164.814 558.68 170.541 557.85 171.874 557.81 C194.66 557.06 209.706 526.29 215.917 490.94 C221.613 458.521 221.873 421.084 223.413 384.636 C224.88 349.923 231.21 293.423 241.808 260.857 C243.71 255.012 246.051 248.59 248.708 242.179 C258.366 218.871 264.414 214.644 278.56 196.317 C278.858 195.931 279.062 195.63 279.147 195.439 L278.429 196.876" fill="#5d4e48" stroke="#2b201d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>
