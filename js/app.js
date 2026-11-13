@@ -12,8 +12,9 @@
   var controls = {}; // key -> 화면 갱신 함수
 
   var $ = function (id) { return document.getElementById(id); };
-  // start.bat 로 띄운 로컬 서버에서 열었는지 (파일 열기·빌드·항목 편집은 서버가 있어야 된다)
-  var SERVER = location.protocol.indexOf('http') === 0;
+  // start.bat 로 띄운 로컬 서버에서 열었는지 (파일 열기·빌드·항목 편집은 서버가 있어야 된다).
+  // 홈페이지에 올린 것도 http 로 열리므로 주소가 이 컴퓨터일 때만 켠다
+  var SERVER = location.protocol.indexOf('http') === 0 && /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
   var $preview = $('preview'), $code = $('code'), $status = $('status');
   var statusTimer = null;
 
@@ -35,7 +36,7 @@
 
   // ---------- 상태 ----------
   function render() {
-    $preview.innerHTML = CG.compose(state, { guide: $('chk-guide').checked });
+    $preview.innerHTML = CG.compose(state);
     $code.value = CG.encode(state);
     for (var k in controls) controls[k]();
     $('btn-prev').disabled = cursor <= 0;
@@ -257,7 +258,6 @@
   $('btn-copy').addEventListener('click', copyCode);
   $('btn-apply').addEventListener('click', applyCode);
   $code.addEventListener('keydown', function (e) { if (e.key === 'Enter') applyCode(); });
-  $('chk-guide').addEventListener('change', render);
 
   document.addEventListener('keydown', function (e) {
     var tag = (e.target.tagName || '').toLowerCase();

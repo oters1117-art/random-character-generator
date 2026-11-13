@@ -14,6 +14,8 @@
 
 빌드 도구도 서버도 Node.js만 있으면 된다. 의존성 설치 없음.
 
+공개 주소: **https://dovemayo.com/character/** (홈페이지 저장소 `X:\AI\dovemayo-site`의 `dist/character/`. 생성기를 고친 뒤 그쪽에서 `node scripts/sync-character.mjs`로 복사하고 커밋·`npx wrangler deploy --config wrangler.jsonc`). 빌드·항목 편집·파일 버튼은 주소가 localhost일 때만 켜진다(`app.js`의 `SERVER`). 화면 제목 아래 링크는 dovemayo.com. "가이드 보기" 체크는 뺐다(엔진의 `opts.guide`와 `sheet.html#guide`는 그대로).
+
 git: 공개 저장소 `oters1117-art/random-character-generator`(브랜치 `main`). gh의 활성 계정은 다른 계정이라 `gh auth token -u oters1117-art` 토큰으로 푸시한다. `samples/`, `*.lnk`, `parts/_trash/`는 올리지 않는다(`.gitignore`). 사용자용 설명은 `README.md`, 화면 캡처는 `docs/`.
 
 ## 구조
