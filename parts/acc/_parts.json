@@ -7,6 +7,5 @@
   {"id":"clawclip","name":"집게핀"},
   {"id":"flower","name":"꽃"},
   {"id":"bigbow","name":"큰 리본 (뒤)"},
-  {"id":"hairroll","name":"헤어롤","w":0.6},
-  {"id":"binyeo","name":"비녀","w":0.5}
+  {"id":"hairroll","name":"헤어롤","w":0.6}
 ]
