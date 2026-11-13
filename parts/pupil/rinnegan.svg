@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="220" height="220" viewBox="0 0 220 220">
+  <title>rinnegan.svg</title>
+  <g id="full">
+    <circle cx="110" cy="110" r="100" fill="#7e5647"/>
+    <circle cx="110" cy="110" r="31.326" fill="none" stroke="#1e1412" stroke-width="13"/>
+    <circle cx="110" cy="110" r="11.448" fill="none" stroke="#1e1412" stroke-width="13"/>
+    <circle cx="110" cy="110" r="51.673" fill="none" stroke="#1e1412" stroke-width="13"/>
+    <circle cx="110" cy="110" r="74.275" fill="none" stroke="#1e1412" stroke-width="13"/>
+  </g>
+</svg>

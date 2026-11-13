@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="702" height="702" viewBox="0 0 702 702">
   <defs>
-    <clipPath id="clip-path-5">
+    <clipPath id="clip-path-1">
       <path d="M242 432.56 L386 432.56 L386 563.54 L242 563.54 Z"/>
     </clipPath>
     <filter id="filter-1" filterUnits="userSpaceOnUse" x="245" y="377" width="138" height="100" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="9" color-interpolation-filters="linearRGB"/></filter>
-    <clipPath id="clip-path-6">
+    <clipPath id="clip-path-2">
       <path d="M460 432.56 L316 432.56 L316 563.54 L460 563.54 Z"/>
     </clipPath>
     <filter id="filter-2" filterUnits="userSpaceOnUse" x="319" y="377" width="138" height="100" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="9" color-interpolation-filters="linearRGB"/></filter>
-    <clipPath id="clip-path-7">
+    <clipPath id="clip-path-3">
       <path d="M242 381.97 C242 343.86 262 326 288 326 C314 326 334 343.86 334 381.97 C334 420.09 314 444.34 288 444.34 C262 444.34 242 420.09 242 381.97 Z"/>
     </clipPath>
-    <clipPath id="clip-path-8">
+    <clipPath id="clip-path-4">
       <path d="M460 381.97 C460 343.86 440 326 414 326 C388 326 368 343.86 368 381.97 C368 420.09 388 444.34 414 444.34 C440 444.34 460 420.09 460 381.97 Z"/>
     </clipPath>
   </defs>
@@ -69,12 +69,12 @@
         </g>
       </g>
       <g data-layer="makeup">
-        <g clip-path="url(#clip-path-5)">
+        <g clip-path="url(#clip-path-1)">
           <g filter="url(#filter-1)">
             <ellipse cx="314" cy="427" rx="40" ry="21" fill="#f3bfb8" opacity="0.5"/>
           </g>
         </g>
-        <g clip-path="url(#clip-path-6)">
+        <g clip-path="url(#clip-path-2)">
           <g filter="url(#filter-2)">
             <ellipse cx="388" cy="427" rx="40" ry="21" fill="#f3bfb8" opacity="0.5"/>
           </g>
@@ -87,7 +87,7 @@
       </g>
       <g data-layer="eye">
         <path d="M242 360 C242 338 262 326 288 326 C314 326 334 338 334 360 C334 382 314 396 288 396 C262 396 242 382 242 360 Z" fill="#ffffff"/>
-        <g clip-path="url(#clip-path-7)">
+        <g clip-path="url(#clip-path-3)">
           <g>
             <circle cx="292" cy="361" r="26" fill="#3e2a22"/>
             <circle cx="292" cy="361" r="17.42" fill="#7e5647"/>
@@ -100,7 +100,7 @@
         </g>
         <g>
           <path d="M460 360 C460 338 440 326 414 326 C388 326 368 338 368 360 C368 382 388 396 414 396 C440 396 460 382 460 360 Z" fill="#ffffff"/>
-          <g clip-path="url(#clip-path-8)">
+          <g clip-path="url(#clip-path-4)">
             <g>
               <circle cx="410" cy="361" r="26" fill="#3e2a22"/>
               <circle cx="410" cy="361" r="17.42" fill="#7e5647"/>
@@ -124,7 +124,6 @@
     </g>
   </g>
   <g id="half">
-    <path d="M243.221 287.41 L243.221 286.69 C241.791 287.41 232.395 317.64 231.53 320.78 C226.62 344.94 218.834 400.62 221.665 431.74 C223.409 450.89 227.731 463.62 229.659 481.06 C232.011 502.35 236.449 558.14 228.851 576.99 C225.676 584.87 216.86 601.96 210.734 602.34 C207.232 602.56 204.79 599.79 200.11 599.79 C202.87 596.8 203.883 596.75 207.37 592.57 C213.265 585.5 230.158 550.56 221.665 538.79 C221.665 564.33 210.195 586.85 196.962 595.74 C195.079 597 189.264 596.66 188.613 598.54 C191.871 591.02 196.2 584.26 200.242 574.6 C215.096 539.11 209.297 486.66 198.672 450.49 C190.593 422.98 187.994 394.88 189.025 366.88 C190.053 338.97 205.05 268.45 227.414 270.17" fill="#5d4e48" stroke="#2b201d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M458.979 287.41 L458.979 286.69 C460.409 287.41 469.806 317.64 470.671 320.78 C475.58 344.94 483.367 400.62 480.535 431.74 C478.792 450.89 474.47 463.62 472.542 481.06 C470.189 502.35 465.751 558.14 473.35 576.99 C476.525 584.87 485.34 601.96 491.466 602.34 C494.968 602.56 497.41 599.79 502.091 599.79 C499.331 596.8 498.318 596.75 494.831 592.57 C488.936 585.5 472.043 550.56 480.535 538.79 C480.535 564.33 492.005 586.85 505.239 595.74 C507.122 597 512.936 596.66 513.587 598.54 C510.329 591.02 506.001 584.26 501.959 574.6 C487.105 539.11 492.904 486.66 503.528 450.49 C511.607 422.98 514.207 394.88 513.175 366.88 C512.147 338.97 497.15 268.45 474.787 270.17" fill="#5d4e48" stroke="#2b201d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M245.888 249.41 C228.399 291.114 223.8 330.069 220.978 376.549 C217.243 438.066 235.994 491.39 232.772 552.947 C232.251 562.913 231.059 571.511 228.851 576.99 C225.676 584.87 216.86 601.96 210.734 602.34 C207.232 602.56 204.79 599.79 200.11 599.79 C202.87 596.8 203.883 596.75 207.37 592.57 C213.265 585.5 230.158 550.56 221.665 538.79 C221.665 564.33 210.195 586.85 196.962 595.74 C195.079 597 189.264 596.66 188.613 598.54 C191.871 591.02 196.2 584.26 200.242 574.6 C210.884 549.173 210.925 515.041 206.185 484.427 C201.219 452.35 189.468 423.716 186.433 390.705 C182.641 349.465 186.094 286.937 201.69 249.296 C205.048 241.19 209.127 233.203 214.081 225.503" fill="#5d4e48" stroke="#2b201d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>

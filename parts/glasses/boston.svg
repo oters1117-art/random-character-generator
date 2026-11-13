@@ -147,11 +147,13 @@
       </g>
     </g>
   </g>
-    <g id="full">
-    <path d="M 250 316 L 318 316 L 338 334 C 345 350 346 372 339 391 C 331 411 310 423 285 423 C 259 423 238 411 230 391 C 223 372 223 350 230 334 Z" fill="#ffffff" fill-opacity="0.16" stroke="#3a3336" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M 452 316 L 384 316 L 364 334 C 357 350 356 372 363 391 C 371 411 392 423 417 423 C 443 423 464 411 472 391 C 479 372 479 350 472 334 Z" fill="#ffffff" fill-opacity="0.16" stroke="#3a3336" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M 334 330 C 343 325 359 325 368 330" fill="none" stroke="#3a3336" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <line x1="231" y1="333" x2="211" y2="331" fill="none" stroke="#3a3336" stroke-width="4" stroke-linecap="round"/>
-    <line x1="471" y1="333" x2="491" y2="331" fill="none" stroke="#3a3336" stroke-width="4" stroke-linecap="round"/>
+  <g id="full">
+    <g>
+      <path d="M250.721 320.667 C275.344 317.881 294.677 316.881 316.721 319.333 C325.378 320.296 338.344 334.215 340.333 338.667 C346.885 353.326 342.01 381.881 331.333 396.667 C318.01 412.215 308.333 417 283.333 417 C257.333 417 242.01 406.881 235.333 392 C227.01 374.215 224.344 358.215 227.387 345.333 C229.787 335.179 241.274 321.735 250.721 320.667 Z" fill="#ffffff" fill-opacity="0.16" stroke="#3a3336" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M383.391 320.667 C408.014 317.881 427.348 316.881 449.391 319.333 C458.049 320.296 471.014 334.215 473.004 338.667 C479.555 353.326 474.681 381.881 464.004 396.667 C450.681 412.215 441.004 417 416.004 417 C390.004 417 374.681 406.881 368.004 392 C359.681 374.215 357.014 358.215 360.058 345.333 C362.457 335.179 373.944 321.735 383.391 320.667 Z" fill="#ffffff" fill-opacity="0.16" stroke="#3a3336" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M336.99 333.986 C344.407 328.986 357.593 328.986 365.01 333.986" fill="none" stroke="#3a3336" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="226.333" y1="350.333" x2="206.333" y2="348.333" fill="none" stroke="#3a3336" stroke-width="6" stroke-linecap="round"/>
+      <line x1="496.725" y1="348.333" x2="476.725" y2="350.333" fill="none" stroke="#3a3336" stroke-width="6" stroke-linecap="round"/>
+    </g>
   </g>
 </svg>

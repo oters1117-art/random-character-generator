@@ -9,5 +9,6 @@
   {"id":"star","name":"별","w":0.7},
   {"id":"cross","name":"십자","w":0.7},
   {"id":"swirl","name":"소용돌이","w":0.7},
-  {"id":"dot","name":"점눈","w":1,"noRing":true}
+  {"id":"dot","name":"점눈","w":1,"noRing":true},
+  {"id":"rinnegan","name":"rinnegan"}
 ]
