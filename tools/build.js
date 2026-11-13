@@ -91,6 +91,11 @@ const CATEGORIES = ['front', 'extra', 'side', 'back', 'face', 'skinfx', 'makeup'
 const PIECE_NAMES = {};
 ['half', 'full', 'left', 'right', 'white', 'lines', 'upper', 'lower', 'fill', 'cap', 'tuck', 'edge'].forEach((n) => { PIECE_NAMES[n] = n; });
 LAYERS.forEach((l) => ['half', 'full'].forEach((s) => { PIECE_NAMES[(l + '-' + s).toLowerCase()] = l + '-' + s; }));
+// 쉬운 이름: back-half / back-full (back_half 도 됨) = 앞머리 뒤.
+// 옆머리·추가머리 등에서는 hairLine 레이어(헤어라인 선 위, 앞머리 아래), 뒷머리 파일에서는 hairBack(목·몸 뒤)
+PIECE_NAMES['back-half'] = 'back-half';
+PIECE_NAMES['back-full'] = 'back-full';
+const BACK_LAYER = (cat) => (cat === 'back' ? 'hairBack' : 'hairLine');
 const MARKERS = { iris: 1 };
 // 그림 없이 _parts.json 의 수치만 쓰는 항목 (눈동자 크기, 아이라인에서 만드는 것들)
 const DATA_ONLY = { iris: 1, lash: 1, fold: 1, lowline: 1, lowlash: 1, eyeGap: 1, eyeY: 1, eyeSize: 1, mouthY: 1 };
@@ -288,7 +293,9 @@ function readSvg(file, prefix) {
       const raw = nameOf(c);
       if (raw === '_ref' && c.children.filter((x) => x.tag).length > 1) warn(path.relative(ROOT, file) + ': 참고 레이어(_ref) 안에 그림이 있습니다. 편집 레이어로 옮겨야 나옵니다');
       if (raw && isHidden(raw)) continue;
-      const key = raw.toLowerCase();
+      const lower = raw.toLowerCase();
+      // 그룹 이름의 _ 는 - 로 읽는다 (back_half = back-half). 정해진 이름일 때만 바꾼다
+      const key = PIECE_NAMES[lower.replace(/_/g, '-')] ? lower.replace(/_/g, '-') : lower;
       if (MARKERS[key]) {
         const m = readMarker(c, key);
         if (m) res.markers[key] = m;
@@ -446,6 +453,7 @@ function buildCategory(cat) {
       };
       for (const name of Object.keys(pc)) {
         if (name === 'half') put(GENERIC[cat], 'half', pc[name]);
+        else if (name === 'back-half' || name === 'back-full') put(BACK_LAYER(cat), name.slice(5), pc[name]);
         else if (name === 'full' || name === 'left' || name === 'right') put(GENERIC[cat], 'full', pc[name]);
         else {
           const k = name.lastIndexOf('-');

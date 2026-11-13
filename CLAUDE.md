@@ -43,7 +43,7 @@ samples/                    확인용 캡처 모음 (없어도 됨)
 - 레이어 순서(아래→위):
   `hairBack` → `body` → `hairMid` → `hairBase` → `ear` → `face` → `skin` → `makeup` → `skinTop` → `mouth` → `eye` → `hairLine` → `brow` → `glasses` → `hairFront` → `hairSide` → `acc`
   (옆머리가 앞머리 위, 눈썹·안경은 앞머리 아래: 사용자 요청 2026-11-13)
-  앞머리 뒤로 들어가야 하는 옆머리 조각(구레나룻 등)은 그룹 이름을 `hairLine-half`로 하면 앞머리 아래에 놓인다.
+  앞머리 뒤로 들어가야 하는 옆머리 조각(구레나룻 등)은 그룹 이름을 **`back-half`**(또는 `back-full`, `back_half`)로 하면 앞머리 아래(`hairLine` 레이어)에 놓인다. 뒷머리 파일에서 `back-*`는 `hairBack`(목·몸 뒤). `hairLine-half`도 그대로 된다(2026-11-13, `build.js`의 `BACK_LAYER`).
 
 ## 항목
 

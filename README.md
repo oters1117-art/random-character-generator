@@ -71,7 +71,7 @@ docs/                       README용 화면 캡처
 - **색**: 기준 색(피부색은 팔레트의 `hex`·`line`에서 볼터치·입술·코 색까지 정해집니다. 머리 `#5d4e48`, 머리 선 `#2b201d`, 피부 `#fdeeea`, 피부 선 `#b46352`, 눈동자 `#7e5647`, 입술 `#dc6450`, 악세사리 `#d8433b` 등)으로 칠하면 빌드가 CSS 변수로 바꿔, 생성기에서 고른 색이 들어갑니다. 다른 색은 그대로 나옵니다.
 - **참고 레이어**: 이름이 `_`로 시작하는 그룹(`_ref` 등)은 빌드에서 빠집니다. 참고용 반투명 캐릭터를 여기에 둡니다.
 - **목록**: 파일 이름이 파츠 id입니다(`front/gap.svg` → `gap`). 화면 이름, 순서, 랜덤 비중(`w`), 기본값은 같은 폴더의 `_parts.json`에 있고, `start.bat` 화면의 "항목 편집"에서도 고칠 수 있습니다. SVG를 넣고 빌드하면 목록 끝에 자동으로 붙습니다.
-- **레이어 순서**(아래→위): `hairBack` → `body` → `hairMid` → `hairBase` → `ear` → `face` → `skin` → `makeup` → `skinTop` → `mouth` → `eye` → `hairLine` → `brow` → `glasses` → `hairFront` → `hairSide` → `acc` (옆머리 조각을 앞머리 뒤로 보내려면 그룹 이름을 `hairLine-half`로)
+- **레이어 순서**(아래→위): `hairBack` → `body` → `hairMid` → `hairBase` → `ear` → `face` → `skin` → `makeup` → `skinTop` → `mouth` → `eye` → `hairLine` → `brow` → `glasses` → `hairFront` → `hairSide` → `acc` (옆머리 조각을 앞머리 뒤로 보내려면 그룹 이름을 `back-half` 또는 `back-full`로. 뒷머리 파일에서는 목·몸 뒤로 갑니다)
 - **머리카락**: 기본머리(`parts/base/hair.svg`)가 항상 깔리고, 얼굴 피부는 헤어라인 아래에만 칠해져 있습니다. 앞머리·옆머리는 그 위에(옆머리가 앞머리보다 위), 뒷머리는 그 뒤에 놓입니다. 내려오는 뒷머리는 `_parts.json`에 `"down": true`, 머리 윤곽보다 크게 감싸는 뒷머리는 `"noCap": true`를 줍니다.
 - **눈**: 눈 파일에는 흰자(`white`), 윗 아이라인(`upper`, 검은 선), 아래 라인(`lower`, 노란 `#f5c400` 가이드 선), 눈동자 중심 표시(`iris`)만 그립니다.
 
