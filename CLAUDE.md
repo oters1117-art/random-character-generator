@@ -12,7 +12,9 @@
 | `build.bat` / `node tools/build.js` | `parts/`의 SVG를 `js/parts-data.js`로 묶는다 |
 | `sheet.html` | 파츠를 한눈에 보는 확인용. 주소 뒤에 `#front,back`처럼 항목을 적으면 그것만, `big`은 크게, `guide`는 가이드 겹침, `random`·`hair-mix`도 됨 |
 
-빌드 도구도 서버도 Node.js만 있으면 된다. 의존성 설치 없음. git 저장소가 아니다.
+빌드 도구도 서버도 Node.js만 있으면 된다. 의존성 설치 없음.
+
+git: 공개 저장소 `oters1117-art/random-character-generator`(브랜치 `main`). gh의 활성 계정은 다른 계정이라 `gh auth token -u oters1117-art` 토큰으로 푸시한다. `samples/`, `*.lnk`, `parts/_trash/`는 올리지 않는다(`.gitignore`). 사용자용 설명은 `README.md`, 화면 캡처는 `docs/`.
 
 ## 구조
 
