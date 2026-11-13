@@ -125,6 +125,6 @@
   </g>
   <g id="full">
     <path fill="#5d4e48" d="M343 137 C340 120 348 108 362 104 C354 114 352 126 355 137 Z"/>
-    <path fill="none" stroke="#2b201d" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M343 137 C340 120 348 108 362 104 C354 114 352 126 355 137"/>
+    <path fill="none" stroke="#2b201d" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.29" d="M343 137 C340 120 348 108 362 104 C354 114 352 126 355 137"/>
   </g>
 </svg>

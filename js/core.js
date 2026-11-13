@@ -562,8 +562,13 @@
       var c = eye.iris || IRIS_CENTER;
       var sc = IRIS_R * ((iris && iris.scale) || 1) / 100;
       var t = 'translate(' + (c[0] + ((iris && iris.dx) || 0)) + ' ' + (c[1] + ((iris && iris.dy) || 0)) + ') scale(';
+      var body = pupil.body;
+      // "흰 동공" 하이라이트: 동공(눈동자 무늬의 진한 부분)을 흰색으로 칠한다. 홍채 색이 없는 무늬(점 눈)는 그대로 둔다
+      if (hl && hl.pupilWhite && body.indexOf('var(--eye)') >= 0) {
+        body = body.replace(/var\(--pupil\)/g, '#ffffff').replace(/(fill|stroke)="#000000"/gi, '$1="#ffffff"');
+      }
       out += eye.white + '<g clip-path="url(#' + clipId + ')">' +
-        '<g transform="' + t + sc + ')">' + pupil.body + '</g>';
+        '<g transform="' + t + sc + ')">' + body + '</g>';
       // 홍채 테두리: 눈동자 크기와 상관없이 굵기 7 로 그린다
       if (!pupil.noRing) {
         out += '<circle cx="' + (c[0] + ((iris && iris.dx) || 0)) + '" cy="' + (c[1] + ((iris && iris.dy) || 0)) + '" r="' + r1(IRIS_R * ((iris && iris.scale) || 1) - 2.5) +
@@ -605,10 +610,13 @@
 
     // 고정 베이스
     var backPart = part('back'), hair = base.hair || {};
-    // noCap: 뒷머리가 머리 윤곽보다 크게 감싸면(아프로 등) 윤곽선이 안쪽 선으로 남으므로 긋지 않는다
+    // noCap: 뒷머리가 머리 윤곽보다 크게 감싸면(곱슬 숏 등) 윤곽선이 안쪽 선으로 남는다.
+    // 그래서 기본머리(칠 + 윤곽선)를 뒷머리 밑에 깐다. 뒷머리가 덮은 곳의 윤곽선은 가려지고,
+    // 뒷머리가 덮지 않은 곳(곱슬 숏의 정수리 등)은 윤곽선이 그대로 보인다.
     var noCap = backPart && backPart.noCap, noTuck = noCap || (backPart && backPart.down);
+    if (noCap) put('hairBack', { half: (hair.fill || '') + (hair.cap || '') });
     put('body', base.body);
-    put('hairBase', { half: (hair.fill || '') + (noCap ? '' : hair.cap || '') + (noTuck ? '' : hair.tuck || '') });
+    put('hairBase', { half: noCap ? '' : (hair.fill || '') + (hair.cap || '') + (noTuck ? '' : hair.tuck || '') });
     put('hairLine', { half: hair.edge || '' });
     put('ear', base.ear);
     put('mouth', base.nose);

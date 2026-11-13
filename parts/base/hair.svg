@@ -4,12 +4,12 @@
     <path fill="#5d4e48" d="M352 133 L351 133 C330 133 310 135 290 141 C254 152 222 176 203 202 C184 228 173 262 171 297 C170 317 172 337 178 352 C180 362 184 372 190 380 L198 386 L352 386 Z"/>
   </g>
   <g id="cap">
-    <path fill="none" stroke="#2b201d" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" d="M351 133 C330 133 310 135 290 141 C254 152 222 176 203 202 C184 228 173 262 171 297"/>
+    <path fill="none" stroke="#2b201d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M351 133 C330 133 310 135 290 141 C254 152 222 176 203 202 C184 228 173 262 171 297"/>
   </g>
   <g id="tuck">
-    <path fill="none" stroke="#2b201d" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" d="M171 297 C170 317 172 337 178 352 C180 362 184 372 190 380"/>
+    <path fill="none" stroke="#2b201d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M171 297 C170 317 172 337 178 352 C180 362 184 372 190 380"/>
   </g>
   <g id="edge">
-    <path fill="none" stroke="#2b201d" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" d="M351 200 C322 200 296 208 278 228 C262 246 250 272 240 298 C232 318 223 340 214 358"/>
+    <path fill="none" stroke="#2b201d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M351 200 C322 200 296 208 278 228 C262 246 250 272 240 298 C232 318 223 340 214 358"/>
   </g>
 </svg>
