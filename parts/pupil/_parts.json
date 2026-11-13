@@ -1,5 +1,5 @@
 [
-  {"id":"basic","name":"기본","w":5,"default":true},
+  {"id":"basic","name":"기본","w":20,"default":true},
   {"id":"big","name":"큰 동공","w":3},
   {"id":"small","name":"작은 동공","w":2},
   {"id":"slit","name":"세로 동공","w":1},

@@ -1,5 +1,5 @@
 [
   {"id":"normal","name":"기본","default":true,"w":6,"scale":1},
-  {"id":"small","name":"조금 작게","w":1,"scale":0.9},
+  {"id":"small","name":"조금 작게","w":0.3,"scale":0.9},
   {"id":"big","name":"조금 크게","w":1,"scale":1.08}
 ]
