@@ -167,7 +167,7 @@ msedge --headless --disable-gpu --hide-scrollbars --allow-file-access-from-files
 
 - 앞머리·추가머리·옆머리·뒷머리·피부특징 줄에 좌우 반전 버튼. `state.flip = { front: true, ... }`, 조합 코드에는 `fl:hf.hs`처럼 붙는다(`core.js`의 `FLIP_KEYS`, `canFlip`). 뒤집히는 것은 `full` 조각뿐이라 `half`만 있는 파츠에서는 효과가 없다. 반전은 켜 둔 대로 유지된다: 랜덤이 바꾸지 않고, 좌우가 같은 파츠에서는 버튼이 흐려질 뿐 켠 상태가 남는다.
 - 줄의 랜덤·고정 버튼은 글자 대신 아이콘(회전 화살표, 압정). `app.js`의 `ICON`, 버튼은 `.tools` 안에 모여 있다.
-- 4×4 샘플(2026-11-14): 로컬 화면의 "4×4 샘플" 버튼이 고정 항목을 지킨 채 16명을 뽑아 보여 주고, 저장하면 `tools/server.js`의 `/api/sample`이 `samples/random-4x4-<시각>.png`(2048px)로 쓴다. 얼굴을 누르면 그 캐릭터를 불러온다.
+- 4×4 샘플(2026-11-14): 로컬 화면의 "4×4 샘플" 버튼이 고정 항목을 지킨 채 16명을 뽑아 보여 주고, 저장하면 `tools/server.js`의 `/api/sample`이 `samples/random-4x4-<시각>.png`(2048px)로 쓴다. 얼굴을 누르면 그 캐릭터를 불러오고, 칸마다 다시 뽑기 버튼이 있다. 저장 이미지는 둥근 카드 16장(칸 480, 사이 20, 여백 38, 모서리 35, 전체 2056px). 시작할 때 얼굴형·피부색과 함께 헤어 악세사리·귀걸이·마스크도 '없음'으로 고정되어 있다(안경은 아님).
 - 주인이 만든 한글·임시 이름 파츠는 영문 id로 바꿨다(2026-11-14): 앞머리 `himebang` `twostrand` `longcurlin` `longwave` `longwave-one` `kkaennip` `braidbang`, 추가머리 `flipends`, 옆머리 `waveshort` `curl` `curllong` `volumecurl` `volumecurllong` `messyin` `braidtemple`, 눈썹 `danmuji`, 입 `frontteeth`.
 
 ## 귀 모양, 귀걸이, 마스크·안대, 코드로 그린 초안 (2026-11-14)
