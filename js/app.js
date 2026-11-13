@@ -102,7 +102,15 @@
     var list = CG.parts[cat.key];
     var row = el('div', { class: 'row' });
     var select = el('select', { 'aria-label': cat.name });
-    list.forEach(function (p) { select.appendChild(el('option', { value: p.id }, p.name)); });
+    // _parts.json 의 group 이 있으면 그 이름으로 묶어 보여 준다 (순서는 목록 그대로)
+    var box = select, boxName = null;
+    list.forEach(function (p) {
+      if ((p.group || null) !== boxName) {
+        boxName = p.group || null;
+        box = boxName ? select.appendChild(el('optgroup', { label: boxName })) : select;
+      }
+      box.appendChild(el('option', { value: p.id }, p.name));
+    });
     select.addEventListener('change', function () { set(cat.key, select.value); });
 
     function step(d) {

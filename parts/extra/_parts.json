@@ -1,15 +1,14 @@
 [
-  {"id":"none","name":"없음","none":true,"default":true},
-  {"id":"ahoge1","name":"바보털 (짧게)","w":2},
-  {"id":"ahoge2","name":"바보털 (길게)","w":2},
-  {"id":"knot","name":"하프업 묶음","w":1.5},
-  {"id":"sidetails","name":"사이드 테일","w":1.5},
-  {"id":"sidetailslong","name":"긴 사이드 테일","w":1},
-  {"id":"onetail","name":"한쪽 사이드 테일","w":1},
-  {"id":"buns","name":"양쪽 당고","w":1},
-  {"id":"topbun","name":"정수리 당고","w":1},
-  {"id":"pigtails","name":"짧은 피그테일","w":1},
-  {"id":"lowbuns","name":"로우 번 두 개","w":1},
-  {"id":"twinhighx","name":"높은 트윈테일 (얹기)","w":1},
-  {"id":"ponyx","name":"높은 포니테일 (얹기)","w":1}
+  {"id":"none","name":"없음","group":"없음","none":true,"default":true},
+  {"id":"ahoge1","name":"바보털 (S)","group":"바보털","w":2},
+  {"id":"ahoge2","name":"바보털 (L)","group":"바보털","w":2},
+  {"id":"apple","name":"사과머리","group":"묶음 · 당고"},
+  {"id":"knot","name":"하프업 묶음","group":"묶음 · 당고","w":1.5},
+  {"id":"buns","name":"양쪽 당고","group":"묶음 · 당고","w":1},
+  {"id":"onetail","name":"한쪽 사이드 테일","group":"테일","w":1},
+  {"id":"sidetails","name":"사이드 테일 (M)","group":"테일","w":1.5},
+  {"id":"sidetailslong","name":"사이드 테일 (L)","group":"테일","w":1},
+  {"id":"pigtails","name":"피그테일","group":"테일","w":1},
+  {"id":"twinhighx","name":"높은 트윈테일 (얹기)","group":"테일","w":1},
+  {"id":"ponyx","name":"높은 포니테일 (얹기)","group":"테일","w":1}
 ]

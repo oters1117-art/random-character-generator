@@ -453,7 +453,7 @@
       var q = along(p, f).q, rx = q[0] - c[0], ry = q[1] - c[1], rl = Math.hypot(rx, ry) || 1;
       var dx = bx + rx / rl * R, dy = by + ry / rl * R, dl = Math.hypot(dx, dy) || 1;
       // 흰자 윤곽에서 조금 띄워서 시작한다 (아래 아이라인 밑에서 시작하도록)
-      var G = o.offset != null ? o.offset : 7, ux = dx / dl, uy = dy / dl;
+      var G = o.offset != null ? o.offset : 5, ux = dx / dl, uy = dy / dl;
       return 'M' + r1(q[0] + ux * G) + ' ' + r1(q[1] + uy * G) + ' L' + r1(q[0] + ux * (G + L)) + ' ' + r1(q[1] + uy * (G + L));
     }).join(' ');
   }
@@ -542,7 +542,7 @@
       else {
         // 흰자 아래 윤곽 전체를 기준선으로 쓴다 (노란 아래 라인은 짧아서 속눈썹을 다 못 놓는다)
         var wb = whiteBottom(eye), base = wb ? resample(wb, 60) : lo;
-        if (base.length) out += stroke(lowLashes(base, opt.lowlash, c), 'cg-lash', W(opt.lowlash, 5));
+        if (base.length) out += stroke(lowLashes(base, opt.lowlash, c), 'cg-lash', W(opt.lowlash, 4));
       }
     }
     return out;
