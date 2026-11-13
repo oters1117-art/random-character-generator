@@ -16,7 +16,7 @@
       <path d="M460 360 C460 338 440 326 414 326 C388 326 368 338 368 360 C368 382 388 396 414 396 C440 396 460 382 460 360 Z"/>
     </clipPath>
   </defs>
-  <title>short-2.svg</title>
+  <title>단무지.svg</title>
   <g id="_ref">
     <g opacity="0.5">
       <rect x="0" y="0" width="702" height="702" fill="#ada19f"/>
@@ -144,6 +144,6 @@
     </g>
   </g>
   <g id="half">
-    <ellipse cx="308.259" cy="297.522" rx="16.667" ry="10.667" fill="#2b201d"/>
+    <ellipse cx="308.259" cy="297.522" rx="15.844" ry="10.14" fill="#5d4e48" stroke="#2b201d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>

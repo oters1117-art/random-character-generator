@@ -3,9 +3,8 @@
   <title>rinnegan.svg</title>
   <g id="full">
     <circle cx="110" cy="110" r="100" fill="#7e5647"/>
-    <circle cx="110" cy="110" r="31.326" fill="none" stroke="#1e1412" stroke-width="13"/>
-    <circle cx="110" cy="110" r="11.448" fill="none" stroke="#1e1412" stroke-width="13"/>
-    <circle cx="110" cy="110" r="51.673" fill="none" stroke="#1e1412" stroke-width="13"/>
-    <circle cx="110" cy="110" r="74.275" fill="none" stroke="#1e1412" stroke-width="13"/>
+    <circle cx="110" cy="110" r="42.182" fill="none" stroke="#1e1412" stroke-width="17.505"/>
+    <circle cx="110" cy="110" r="15.415" fill="none" stroke="#1e1412" stroke-width="17.505"/>
+    <circle cx="110" cy="110" r="69.58" fill="none" stroke="#1e1412" stroke-width="17.505"/>
   </g>
 </svg>

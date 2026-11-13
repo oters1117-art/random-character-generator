@@ -10,5 +10,6 @@
   {"id":"sidetailslong","name":"사이드 테일 (L)","group":"테일","w":1},
   {"id":"pigtails","name":"피그테일","group":"테일","w":1},
   {"id":"twinhighx","name":"높은 트윈테일 (얹기)","group":"테일","w":1},
-  {"id":"ponyx","name":"높은 포니테일 (얹기)","group":"테일","w":1}
+  {"id":"ponyx","name":"높은 포니테일 (얹기)","group":"테일","w":1},
+  {"id":"플립","name":"플립"}
 ]
