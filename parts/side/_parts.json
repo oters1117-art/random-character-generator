@@ -1,0 +1,23 @@
+[
+  {"id":"none","name":"없음 (귀 노출)","w":3,"default":true,"none":true},
+  {"id":"sideburn","name":"구레나룻","w":2},
+  {"id":"jawshort","name":"귀 앞 짧은 가닥","w":1.5},
+  {"id":"jaw","name":"턱선 길이","w":2},
+  {"id":"hime","name":"히메컷","w":1.5},
+  {"id":"himelong","name":"긴 히메컷 (가슴)","w":1},
+  {"id":"long","name":"긴 옆머리","w":3},
+  {"id":"chest","name":"가슴까지 긴 옆머리","w":2},
+  {"id":"curlin","name":"안쪽 말림","w":1.5},
+  {"id":"curlinlong","name":"어깨 안쪽 말림","w":1},
+  {"id":"flipout","name":"바깥 뻗침","w":1.5},
+  {"id":"flipoutlong","name":"어깨 바깥 뻗침","w":1},
+  {"id":"wave","name":"웨이브","w":1.5},
+  {"id":"wavelong","name":"긴 웨이브","w":1},
+  {"id":"drill","name":"롤 (드릴)","w":0.7},
+  {"id":"drilllong","name":"긴 롤 (드릴)","w":0.7},
+  {"id":"braid","name":"땋은 옆머리","w":0.7},
+  {"id":"braidlong","name":"긴 땋은 옆머리","w":0.7},
+  {"id":"spike","name":"뾰족 스파이크","w":1},
+  {"id":"spikelong","name":"긴 스파이크","w":1},
+  {"id":"tied","name":"끝을 묶은 옆머리","w":1}
+]

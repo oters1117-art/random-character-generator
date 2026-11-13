@@ -1,0 +1,5 @@
+[
+  {"id":"none","name":"없음","none":true,"default":true},
+  {"id":"light","name":"연하게","w":2},
+  {"id":"deep","name":"진하게","w":1}
+]

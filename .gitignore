@@ -1,0 +1,11 @@
+# Windows 바로 가기
+*.lnk
+
+# 작업 중 캡처 모음 (README용 캡처는 docs/)
+samples/
+
+# 항목 편집 창에서 지운 파츠
+parts/_trash/
+
+node_modules/
+out.svg

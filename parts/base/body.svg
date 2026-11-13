@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 702 702" width="702" height="702">
+  <g id="half">
+    <path d="M260 573 L230 582 C183 596 133 625 91 672 L60 712 L352 712 L352 643 C296 641 265 605 260 573 Z" fill="#f9f2f1"/>
+    <path fill="#fdeeea" d="M296 490 L298 522 C303 540 301 556 283 566 L260 573 C265 605 296 641 352 643 L352 490 Z"/>
+    <path fill="none" stroke="#b46352" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M230 582 C183 596 133 625 91 672 L64 706"/>
+    <path fill="none" stroke="#b46352" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M296 500 C298 510 298 516 298 522 C303 540 301 556 283 566 C268 573 248 578 230 582"/>
+    <path fill="none" stroke="#b46352" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M260 572 C265 605 296 641 351 643"/>
+  </g>
+  <use id="_mirror-half" href="#half" xlink:href="#half" transform="translate(702 0) scale(-1 1)"/>
+</svg>

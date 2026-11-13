@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-110 -110 220 220">
+  <g id="_guide" opacity="0.35">
+    <circle r="100" fill="#3d2a22"/>
+    <circle r="67" fill="#7e5647"/>
+    <circle cy="-8" r="37" fill="#1e1412"/>
+  </g>
+  <g id="full">
+    <circle cx="-38" cy="-42" r="22" fill="#fff"/>
+    <circle cx="34" cy="38" r="10" fill="#fff" opacity=".85"/>
+  </g>
+</svg>

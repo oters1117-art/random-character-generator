@@ -1,0 +1,12 @@
+[
+  {"id":"flat","name":"일자","w":2,"default":true},
+  {"id":"arch","name":"아치","w":2},
+  {"id":"down","name":"처진 눈썹","w":2},
+  {"id":"up","name":"치켜 올라간 눈썹","w":2},
+  {"id":"angled","name":"각진 눈썹"},
+  {"id":"thick","name":"두꺼운 눈썹"},
+  {"id":"thin","name":"얇은 눈썹"},
+  {"id":"short","name":"짧고 둥근 눈썹"},
+  {"id":"frown","name":"찌푸린 눈썹"},
+  {"id":"단무지","name":"단무지"}
+]

@@ -1,0 +1,5 @@
+[
+  {"id":"none","name":"없음","w":1.5,"default":true,"none":true},
+  {"id":"one","name":"1개","w":3},
+  {"id":"two","name":"2개","w":3}
+]

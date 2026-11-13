@@ -1,0 +1,6 @@
+[
+  {"id":"none","name":"없음","default":true,"none":true},
+  {"id":"pin","name":"헤어핀"},
+  {"id":"band","name":"머리띠"},
+  {"id":"bow","name":"bow"}
+]

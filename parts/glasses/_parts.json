@@ -1,0 +1,5 @@
+[
+  {"id":"none","name":"없음","default":true,"none":true},
+  {"id":"round","name":"둥근테"},
+  {"id":"square","name":"사각테"}
+]

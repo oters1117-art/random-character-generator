@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>파츠 확인 시트</title>
+  <style>
+    body { margin: 16px; background: #f4f1ee; color: #2b2523; font: 13px/1.4 "Malgun Gothic", system-ui, sans-serif; }
+    h2 { margin: 18px 0 6px; font-size: 14px; }
+    .grid { display: flex; flex-wrap: wrap; gap: 8px; }
+    figure { margin: 0; width: 190px; }
+    figure svg { display: block; width: 190px; height: 190px; border-radius: 12px; }
+    figcaption { text-align: center; padding: 2px 0 4px; }
+    body.big figure { width: 300px; }
+    body.big figure svg { width: 300px; height: 300px; }
+  </style>
+</head>
+<body>
+  <!-- 파츠를 추가한 뒤 모양을 한눈에 확인하는 용도. 기본 캐릭터에서 한 항목씩만 바꿔 보여 준다. -->
+  <div id="root"></div>
+
+  <script src="js/core.js"></script>
+  <script src="js/palettes.js"></script>
+  <script src="js/parts-data.js"></script>
+  <script>
+    (function () {
+      var root = document.getElementById('root');
+      // 주소 뒤에 #eye,brow 처럼 쓰면 그 항목만 보여 준다 (random, hair-mix 도 가능)
+      var hash = decodeURIComponent(location.hash.replace(/^#/, ''));
+      var onlyList = hash ? hash.split(',') : null;
+      // guide 를 넣으면 헤어라인 가이드를 겹쳐 그린다. big 을 넣으면 타일을 크게 그린다.
+      var GUIDE = false, BIG = false;
+      if (onlyList) {
+        GUIDE = onlyList.indexOf('guide') >= 0;
+        BIG = onlyList.indexOf('big') >= 0;
+        onlyList = onlyList.filter(function (k) { return k !== 'guide' && k !== 'big'; });
+        if (!onlyList.length) onlyList = null;
+      }
+      if (BIG) document.body.classList.add('big');
+      function show(key) { return !onlyList || onlyList.indexOf(key) >= 0; }
+      var ZOOM = { eye: 1, iris: 1, pupil: 1, hl: 1, lash: 1, brow: 1, mouth: 1, glasses: 1, skinfx: 1, makeup: 1 };
+
+      function section(title, items) {
+        var h = document.createElement('h2');
+        h.textContent = title;
+        var grid = document.createElement('div');
+        grid.className = 'grid';
+        items.forEach(function (it) {
+          var fig = document.createElement('figure');
+          fig.innerHTML = CG.compose(it.state, { guide: GUIDE }) + '<figcaption></figcaption>';
+          if (it.zoom) {
+            // 얼굴 부분만 확대해서 본다
+            fig.firstChild.setAttribute('viewBox', '161 240 380 285');
+            fig.firstChild.style.height = '142px';
+          }
+          fig.lastChild.textContent = it.label;
+          grid.appendChild(fig);
+        });
+        root.appendChild(h);
+        root.appendChild(grid);
+      }
+
+      // 결과가 매번 같도록 고정된 난수를 쓴다
+      var seed = 12345;
+      function rnd() { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; }
+
+      if (show('random')) {
+        var randoms = [];
+        for (var i = 0; i < 18; i++) randoms.push({ state: CG.randomState(null, null, rnd), label: '랜덤 ' + (i + 1) });
+        section('랜덤 조합', randoms);
+      }
+
+      CG.categories.forEach(function (c) {
+        if (!show(c.key)) return;
+        section(c.name, CG.parts[c.key].map(function (p) {
+          var s = CG.defaultState();
+          s[c.key] = p.id;
+          return { state: s, label: p.name, zoom: !!ZOOM[c.key] };
+        }));
+      });
+
+      if (show('hair-mix')) {
+        // 얼굴은 기본으로 두고 헤어만 랜덤으로 섞는다
+        var mixes = [], keep = {};
+        CG.categories.forEach(function (c) { keep[c.key] = true; });
+        CG.colorSlots.forEach(function (c) { keep[c.key] = true; });
+        keep.front = keep.side = keep.back = keep.ahoge = false;
+        for (var m = 0; m < 48; m++) {
+          var s = CG.randomState(null, keep, rnd);
+          mixes.push({ state: s, label: [s.front, s.side, s.back].join(' / ') });
+        }
+        section('헤어 랜덤 조합', mixes);
+      }
+    })();
+  </script>
+</body>
+</html>

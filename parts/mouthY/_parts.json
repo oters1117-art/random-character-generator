@@ -1,0 +1,5 @@
+[
+  {"id":"normal","name":"기본","default":true,"w":6,"dy":0},
+  {"id":"down","name":"조금 아래로","w":1,"dy":7},
+  {"id":"up","name":"조금 위로","w":1,"dy":-6}
+]

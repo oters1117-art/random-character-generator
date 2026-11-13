@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="220" height="220" viewBox="0 0 220 220">
+  <title>basic.svg</title>
+  <g id="full">
+    <circle cx="110" cy="110" r="100" fill="#7e5647"/>
+    <circle cx="110" cy="106.526" r="37" fill="#1e1412"/>
+  </g>
+</svg>

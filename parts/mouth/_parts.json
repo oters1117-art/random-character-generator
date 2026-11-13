@@ -1,0 +1,17 @@
+[
+  {"id":"smile","name":"작은 미소","w":3,"default":true},
+  {"id":"line","name":"일자","w":2},
+  {"id":"cat","name":"고양이입","w":2},
+  {"id":"open","name":"벌린 웃음","w":2},
+  {"id":"frown","name":"시무룩","w":1.5},
+  {"id":"o","name":"작게 벌린 입","w":1.5},
+  {"id":"pout","name":"삐죽"},
+  {"id":"smirk","name":"한쪽 올린 입꼬리"},
+  {"id":"wavy","name":"물결 입"},
+  {"id":"tri","name":"세모 입"},
+  {"id":"grin","name":"이 보이는 웃음"},
+  {"id":"fang","name":"덧니"},
+  {"id":"lips","name":"도톰한 입술"},
+  {"id":"dot","name":"점 입"},
+  {"id":"front teeth","name":"front teeth"}
+]

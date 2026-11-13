@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 702 702" width="702" height="702">
+  <g id="half">
+    <g fill="none" stroke-width="2.5" stroke-linecap="round">
+    <g>
+    <path d="M351 200 C322 200 296 208 278 228 C262 246 250 272 240 298 C232 318 223 340 214 358" stroke="#ff1f8f" stroke-width="3"/>
+    <path d="M351 133 C330 133 310 135 290 141 C254 152 222 176 203 202 C184 228 173 262 171 297" stroke="#2f7dff" stroke-dasharray="4 6"/>
+    <path d="M351 133 L351 700" stroke="#14d8d0" stroke-width="2"/>
+    <path d="M351 133 C338 150 322 200 316 260 C312 320 310 420 308 700" stroke="#14d8d0" stroke-width="2"/>
+    <path d="M351 133 C320 140 280 180 264 250 C254 300 250 400 246 700" stroke="#14d8d0" stroke-width="2"/>
+    <path d="M351 133 C300 132 232 160 210 240 C198 290 194 400 188 700" stroke="#14d8d0" stroke-width="2"/>
+    <path d="M351 133 C330 133 310 135 290 141 C254 152 222 176 203 202 C184 228 173 262 171 297 C168 400 160 560 150 700" stroke="#14d8d0" stroke-width="2"/>
+    </g>
+  </g>
+  <g id="full">
+    </g>
+    <circle cx="351" cy="133" r="6" fill="#14d8d0"/>
+  </g>
+</svg>

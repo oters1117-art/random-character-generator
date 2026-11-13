@@ -1,0 +1,5 @@
+[
+  {"id":"none","name":"없음","none":true,"default":true,"w":3},
+  {"id":"inner","name":"속쌍꺼풀","w":1.5,"gap":8},
+  {"id":"outer","name":"쌍꺼풀","w":2,"gap":13}
+]

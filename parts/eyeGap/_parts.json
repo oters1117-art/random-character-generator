@@ -1,0 +1,5 @@
+[
+  {"id":"normal","name":"기본","default":true,"w":6,"dx":7},
+  {"id":"wide","name":"조금 멀게","w":1,"dx":12},
+  {"id":"narrow","name":"조금 가깝게","w":1,"dx":3}
+]

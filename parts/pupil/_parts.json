@@ -1,0 +1,13 @@
+[
+  {"id":"basic","name":"기본","w":5,"default":true},
+  {"id":"big","name":"큰 동공","w":3},
+  {"id":"small","name":"작은 동공","w":2},
+  {"id":"slit","name":"세로 동공","w":1.5},
+  {"id":"ring","name":"링","w":0.8},
+  {"id":"blank","name":"동공 없음","w":0.8},
+  {"id":"heart","name":"하트","w":0.7},
+  {"id":"star","name":"별","w":0.7},
+  {"id":"cross","name":"십자","w":0.7},
+  {"id":"swirl","name":"소용돌이","w":0.7},
+  {"id":"dot","name":"점눈","w":1,"noRing":true}
+]

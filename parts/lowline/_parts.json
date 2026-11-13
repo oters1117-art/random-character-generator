@@ -1,0 +1,4 @@
+[
+  {"id":"none","name":"없음","none":true,"default":true,"w":2},
+  {"id":"on","name":"있음","w":2}
+]

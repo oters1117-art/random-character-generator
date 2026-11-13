@@ -1,0 +1,9 @@
+[
+  {"id":"none","name":"없음","none":true,"default":true,"w":3},
+  {"id":"up1","name":"1개","w":2,"count":1},
+  {"id":"up3","name":"3개","w":3,"count":3},
+  {"id":"up5","name":"5개","w":2,"count":5},
+  {"id":"down1","name":"아래로 1개","w":0.7,"count":1,"dir":"down","len":22,"center":0.05},
+  {"id":"down3","name":"아래로 3개","w":1,"count":3,"dir":"down","len":22,"center":0.12},
+  {"id":"down5","name":"아래로 5개","w":0.7,"count":5,"dir":"down","len":22,"center":0.2}
+]
