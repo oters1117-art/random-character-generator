@@ -69,7 +69,7 @@ SVG 안에서 그룹(레이어) 이름으로 역할을 구분합니다.
 
 ## 레이어 순서 (아래 → 위)
 
-`hairBack` → `body` → `hairMid` → `hairBase` → `ear` → `face` → `skin` → `makeup` → `skinTop` → `mouth` → `eye` → `hairLine` → `hairSide` → `hairFront` → `brow` → `glasses` → `acc`
+`hairBack` → `body` → `hairMid` → `hairBase` → `ear` → `face` → `skin` → `makeup` → `skinTop` → `mouth` → `eye` → `hairLine` → `brow` → `glasses` → `hairFront` → `hairSide` → `hairTop` → `acc`
 
 ## 헤어를 그릴 때
 
