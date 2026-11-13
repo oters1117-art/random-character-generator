@@ -1,6 +1,6 @@
 [
-  {"id":"none","name":"없음","none":true,"default":true,"w":5},
-  {"id":"n3","name":"3개","w":1.5,"count":3},
+  {"id":"none","name":"없음","none":true,"default":true,"w":3},
+  {"id":"n3","name":"3개","w":2,"count":3},
   {"id":"n5","name":"5개","w":1,"count":5},
   {"id":"n7","name":"7개","w":0.6,"count":7}
 ]
