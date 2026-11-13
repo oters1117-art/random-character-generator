@@ -1,4 +1,5 @@
 [
   {"id":"none","name":"없음","none":true},
-  {"id":"blush","name":"볼터치","w":3,"default":true}
+  {"id":"blush","name":"볼터치","w":3,"default":true},
+  {"id":"blush-nose","name":"blush-nose"}
 ]
