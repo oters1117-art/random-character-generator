@@ -15,6 +15,7 @@
 | `lash` `fold` `lowline` `lowlash` `aegyo` | 속눈썹, 쌍꺼풀, 아래 아이라인, 아래 속눈썹, 애교살. 그림 없이 `_parts.json` 수치만 있고, 눈 파일의 아이라인을 따라 자동으로 그려집니다 |
 | `iris` | 눈동자 크기·위치. 그림 없이 `_parts.json`의 수치만 있습니다 |
 | `acc` `glasses` | 헤어 악세사리, 안경 |
+| `ear` `earring` `facewear` | 귀 모양(고양이귀는 `hairMid-half`), 귀걸이(귓불 (201, 440) 기준, `skinTop` 레이어), 마스크·안대(`glasses` 레이어) |
 | `base` | 항상 그려지는 것: 몸(`body`), 귀(`ear`), 코(`nose`), 기본머리(`hair`), 가이드 선(`guide`) |
 
 ## 파일 하나 = 파츠 하나

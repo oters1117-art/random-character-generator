@@ -1,10 +1,13 @@
 [
   {"id":"none","name":"없음 (귀 노출)","group":"없음 · 짧게","w":3,"default":true,"none":true},
   {"id":"sideburn","name":"구레나룻","group":"없음 · 짧게","w":2},
+  {"id":"aegyo","name":"애교머리 (귀 앞 잔머리)","group":"없음 · 짧게","w":1.5},
   {"id":"jawshort","name":"스트레이트 (S)","group":"스트레이트","w":1.5},
   {"id":"jaw","name":"스트레이트 (M)","group":"스트레이트","w":2},
   {"id":"long","name":"스트레이트 (L)","group":"스트레이트","w":3},
   {"id":"chest","name":"스트레이트 (XL)","group":"스트레이트","w":2},
+  {"id":"xxlong","name":"스트레이트 (XXL)","group":"스트레이트","w":1},
+  {"id":"tuckone","name":"한쪽 귀 넘김 (L)","group":"스트레이트","w":1},
   {"id":"hime","name":"히메컷 (M)","group":"스트레이트","w":1.5},
   {"id":"himelong","name":"히메컷 (L)","group":"스트레이트","w":1},
   {"id":"spike","name":"스파이크 (M)","group":"스트레이트","w":1},

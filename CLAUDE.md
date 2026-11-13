@@ -169,3 +169,9 @@ msedge --headless --disable-gpu --hide-scrollbars --allow-file-access-from-files
 - 줄의 랜덤·고정 버튼은 글자 대신 아이콘(회전 화살표, 압정). `app.js`의 `ICON`, 버튼은 `.tools` 안에 모여 있다.
 - 4×4 샘플(2026-11-14): 로컬 화면의 "4×4 샘플" 버튼이 고정 항목을 지킨 채 16명을 뽑아 보여 주고, 저장하면 `tools/server.js`의 `/api/sample`이 `samples/random-4x4-<시각>.png`(2048px)로 쓴다. 얼굴을 누르면 그 캐릭터를 불러온다.
 - 주인이 만든 한글·임시 이름 파츠는 영문 id로 바꿨다(2026-11-14): 앞머리 `himebang` `twostrand` `longcurlin` `longwave` `longwave-one` `kkaennip` `braidbang`, 추가머리 `flipends`, 옆머리 `waveshort` `curl` `curllong` `volumecurl` `volumecurllong` `messyin` `braidtemple`, 눈썹 `danmuji`, 입 `frontteeth`.
+
+## 귀 모양, 귀걸이, 마스크·안대, 코드로 그린 초안 (2026-11-14)
+
+- 새 항목: `ear`(귀 모양, 얼굴 묶음, 코드 `er`), `earring`(귀걸이, `ae`), `facewear`(마스크·안대, `af`). 귀는 이제 `parts/ear/`에서 그린다(`base/ear.svg`는 그 폴더가 없을 때만 쓰인다). 악세사리와 마스크·안대에도 좌우 반전 버튼.
+- 아래 파츠는 주인 그림이 아니라 Claude가 좌표로 그린 초안이다(주인이 VectorCraft로 다듬을 것): 옆머리 `xxlong` `tuckone` `aegyo`, 뒷머리 `hippieshort` `hippie`(`curlyl` 변형) `waveperm` `scurl` `clawup`, 추가머리 `halfbun` `halftwin`(기존 변형) `crownbraid`, 앞머리 `tribang`, 귀·귀걸이·마스크·안대 전부, 악세사리 `snap2` `clawclip` `flower` `bigbow` `hairroll` `binyeo`.
+- 아래 속눈썹: 눈에서 8 띄우고 길이 5.

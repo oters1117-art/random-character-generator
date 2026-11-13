@@ -1,0 +1,8 @@
+[
+  {"id":"none","name":"없음","default":true,"none":true},
+  {"id":"stud","name":"스터드","w":2},
+  {"id":"hoop","name":"링"},
+  {"id":"drop","name":"드롭"},
+  {"id":"bar","name":"긴 바"},
+  {"id":"cuff","name":"이어커프","w":0.6}
+]

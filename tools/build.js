@@ -83,10 +83,11 @@ const LAYERS = ['hairBack', 'body', 'hairMid', 'hairBase', 'ear', 'face', 'skin'
 // 항목 -> 기본 레이어. 여기 없는 항목(eye, pupil, hl, lash, iris)은 따로 처리한다.
 const GENERIC = {
   front: 'hairFront', extra: 'hairFront', side: 'hairSide', back: 'hairMid', face: 'face', skinfx: 'skin',
-  makeup: 'makeup', around: 'makeup', lip: 'makeup', brow: 'brow', mouth: 'mouth', acc: 'acc', glasses: 'glasses'
+  makeup: 'makeup', around: 'makeup', lip: 'makeup', brow: 'brow', mouth: 'mouth', acc: 'acc', glasses: 'glasses',
+  ear: 'ear', earring: 'skinTop', facewear: 'glasses'
 };
 const CATEGORIES = ['front', 'extra', 'side', 'back', 'face', 'skinfx', 'makeup', 'lip', 'eye', 'iris', 'pupil', 'hl', 'lash', 'fold', 'lowline', 'lowlash', 'around',
-  'brow', 'mouth', 'eyeGap', 'eyeY', 'eyeSize', 'mouthY', 'acc', 'glasses'];
+  'brow', 'mouth', 'eyeGap', 'eyeY', 'eyeSize', 'mouthY', 'acc', 'glasses', 'ear', 'earring', 'facewear'];
 
 const PIECE_NAMES = {};
 ['half', 'full', 'left', 'right', 'white', 'lines', 'upper', 'lower', 'fill', 'cap', 'tuck', 'edge'].forEach((n) => { PIECE_NAMES[n] = n; });

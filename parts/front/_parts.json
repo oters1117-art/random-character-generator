@@ -12,6 +12,7 @@
   {"id":"zigzag","name":"톱니뱅 (M)","group":"풀뱅","w":1},
   {"id":"mbang","name":"M자뱅 (M)","group":"풀뱅","w":1.5},
   {"id":"mbanglong","name":"M자뱅 (L)","group":"풀뱅","w":1},
+  {"id":"tribang","name":"삼각 뱅","group":"풀뱅","w":1},
   {"id":"curly","name":"곱슬 앞머리 (M)","group":"풀뱅","w":1.5},
   {"id":"curlylong","name":"곱슬 앞머리 (L)","group":"풀뱅","w":1},
   {"id":"eyecover2","name":"양쪽 눈 가림","group":"풀뱅","w":0.7},

@@ -23,6 +23,10 @@
   {"id":"wavem","name":"웨이브 (M)","group":"웨이브 · 곱슬","w":2,"down":true},
   {"id":"wavelongbob","name":"웨이브 (L)","group":"웨이브 · 곱슬","w":1.5,"down":true},
   {"id":"wavel","name":"웨이브 (XL)","group":"웨이브 · 곱슬","w":2,"down":true},
+  {"id":"hippieshort","name":"히피펌 (S)","group":"웨이브 · 곱슬","w":1,"down":true},
+  {"id":"hippie","name":"히피펌 (M)","group":"웨이브 · 곱슬","w":1,"down":true},
+  {"id":"waveperm","name":"물결펌 (L)","group":"웨이브 · 곱슬","w":1,"down":true},
+  {"id":"scurl","name":"굵은 S컬 (XL)","group":"웨이브 · 곱슬","w":1.5,"down":true},
   {"id":"curlyl","name":"볼륨 곱슬 롱","group":"웨이브 · 곱슬","w":1,"down":true},
   {"id":"layered","name":"레이어드 (M)","group":"레이어드","w":1.5,"down":true},
   {"id":"layeredlong","name":"레이어드 (L)","group":"레이어드","w":1.5,"down":true},
@@ -50,5 +54,6 @@
   {"id":"bun2","name":"양쪽 당고","group":"번 · 당고","w":1.5},
   {"id":"buntwin","name":"당고 + 트윈테일","group":"번 · 당고","w":0.7},
   {"id":"lowbun","name":"낮은 번 (옆)","group":"번 · 당고","w":1},
-  {"id":"lowbuns","name":"로우 번 두 개","group":"번 · 당고","w":1}
+  {"id":"lowbuns","name":"로우 번 두 개","group":"번 · 당고","w":1},
+  {"id":"clawup","name":"집게핀 올림머리","group":"번 · 당고","w":1.5}
 ]
