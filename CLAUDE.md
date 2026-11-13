@@ -174,4 +174,4 @@ msedge --headless --disable-gpu --hide-scrollbars --allow-file-access-from-files
 
 - 새 항목: `ear`(귀 모양, 얼굴 묶음, 코드 `er`), `earring`(귀걸이, `ae`), `facewear`(마스크·안대, `af`). 귀는 이제 `parts/ear/`에서 그린다(`base/ear.svg`는 그 폴더가 없을 때만 쓰인다). 악세사리와 마스크·안대에도 좌우 반전 버튼.
 - 아래 파츠는 주인 그림이 아니라 Claude가 좌표로 그린 초안이다(주인이 VectorCraft로 다듬을 것): 옆머리 `xxlong` `tuckone` `aegyo`, 뒷머리 `hippieshort` `hippie`(`curlyl` 변형) `waveperm` `scurl` `clawup`, 추가머리 `halfbun` `halftwin`(기존 변형) `crownbraid`, 앞머리 `tribang`, 귀·귀걸이·마스크·안대 전부, 악세사리 `snap2` `clawclip` `flower` `bigbow` `hairroll` `binyeo`.
-- 아래 속눈썹: 눈에서 8 띄우고 길이 5.
+- 아래 속눈썹: 아래 라인에 붙여(1) 바깥쪽 아래로 비스듬히, 길이 11, 굵기 5. 안대는 안경 항목으로 옮겼다(마스크 항목에는 마스크만).

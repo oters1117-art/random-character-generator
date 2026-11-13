@@ -1,6 +1,5 @@
 [
   {"id":"none","name":"없음","default":true,"none":true},
   {"id":"mask","name":"마스크","w":2},
-  {"id":"maskblack","name":"검은 마스크"},
-  {"id":"eyepatch","name":"안대 (의료용)"}
+  {"id":"maskblack","name":"검은 마스크"}
 ]
