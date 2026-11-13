@@ -49,5 +49,6 @@
   {"id":"buntwin","name":"당고 + 트윈테일","group":"번 · 당고","w":0.7},
   {"id":"lowbun","name":"낮은 번 (옆)","group":"번 · 당고","w":1},
   {"id":"lowbuns","name":"로우 번 두 개","group":"번 · 당고","w":1},
-  {"id":"braid-big-side","name":"braid-big-side"}
+  {"id":"braid-big-side","name":"braid-big-side"},
+  {"id":"braid-ring","name":"braid-ring"}
 ]

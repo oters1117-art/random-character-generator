@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 702 702" width="702" height="702">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="702" height="702" viewBox="0 0 702 702">
+  <title>hair.svg</title>
   <g id="fill">
-    <path fill="#5d4e48" d="M352 133 L351 133 C330 133 310 135 290 141 C254 152 222 176 203 202 C184 228 173 262 171 297 C170 317 172 337 178 352 C180 362 184 372 190 380 L198 386 L352 386 Z"/>
+    <path d="M352 135.951 L351.016 135.951 C330.344 135.951 310.656 137.919 290.968 143.826 C255.53 154.654 224.03 178.279 205.327 203.873 C186.623 229.467 175.795 262.936 173.826 297.39 C172.842 317.077 174.811 336.765 180.717 351.531 C182.686 361.375 186.623 371.219 192.53 379.094 L200.405 385 L352 385 Z" fill="#5d4e48"/>
   </g>
   <g id="cap">
-    <path fill="none" stroke="#2b201d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M351 133 C330 133 310 135 290 141 C254 152 222 176 203 202 C191 218.4 182.2 238 176.8 259"/>
+    <path d="M351 133 C330 133 310 135 290 141 C254 152 222 176 203 202 C191 218.4 182.2 238 176.8 259" fill="none" stroke="#2b201d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
   <g id="tuck">
-    <path fill="none" stroke="#2b201d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M176.8 259 C173.7 271.3 171.7 284.1 171 297 C170 317 172 337 178 352 C180 362 184 372 190 380"/>
+    <path d="M176.8 259 C173.7 271.3 171.7 284.1 171 297 C170 317 172 337 178 352 C180 362 184 372 190 380" fill="none" stroke="#2b201d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
   <g id="edge">
-    <path fill="none" stroke="#2b201d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M351 200 C322 200 296 208 278 228 C262 246 250 272 240 298 C232 318 223 340 214 358"/>
+    <path d="M351 200 C322 200 296 208 278 228 C262 246 250 272 240 298 C232 318 223 340 214 358" fill="none" stroke="#2b201d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>
