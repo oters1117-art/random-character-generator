@@ -16,6 +16,8 @@
 
 공개 주소: **https://dovemayo.com/character/** (홈페이지 저장소 `X:\AI\dovemayo-site`의 `dist/character/`. 생성기를 고친 뒤 그쪽에서 `node scripts/sync-character.mjs`로 복사하고 커밋·`npx wrangler deploy --config wrangler.jsonc`). 빌드·항목 편집·파일 버튼은 주소가 localhost일 때만 켜진다(`app.js`의 `SERVER`). 화면 제목 아래 링크는 dovemayo.com. "가이드 보기" 체크는 뺐다(엔진의 `opts.guide`와 `sheet.html#guide`는 그대로).
 
+화면(2026-11-13): PC는 카드 아래에 랜덤/이전/다음, PNG 저장/SVG 저장/**이미지 복사**("기본으로"는 뺌). 이미지 복사는 1024px PNG 왼쪽 위에 `dovemayo.com`을 둘기마요고딕(`fonts/dovemayo-gothic-latin.woff2`, 소문자·마침표만 뽑은 것)으로 작고 흐리게 적어 클립보드에 넣는다. 클립보드는 https나 localhost에서만 되고, 안 되면 같은 이미지를 파일로 저장한다. 휴대폰(760px 이하)은 얼굴 카드가 위에 붙고(sticky), 카드 아래 버튼·조합 코드는 숨기고 카드 위 아이콘 셋(왼쪽 위 랜덤, 오른쪽 위 이전·이미지 복사)만 쓴다. 항목은 한 줄에 하나(이름·선택·랜덤·고정, ‹ › 버튼 숨김). 안내 글은 카드 아래쪽에 잠깐 뜨는 토스트(`#status`).
+
 git: 공개 저장소 `oters1117-art/random-character-generator`(브랜치 `main`). gh의 활성 계정은 다른 계정이라 `gh auth token -u oters1117-art` 토큰으로 푸시한다. `samples/`, `*.lnk`, `parts/_trash/`는 올리지 않는다(`.gitignore`). 사용자용 설명은 `README.md`, 화면 캡처는 `docs/`.
 
 ## 구조
