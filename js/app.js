@@ -12,6 +12,8 @@
   var controls = {}; // key -> 화면 갱신 함수
 
   var $ = function (id) { return document.getElementById(id); };
+  // start.bat 로 띄운 로컬 서버에서 열었는지 (파일 열기·빌드·항목 편집은 서버가 있어야 된다)
+  var SERVER = location.protocol.indexOf('http') === 0;
   var $preview = $('preview'), $code = $('code'), $status = $('status');
   var statusTimer = null;
 
@@ -84,6 +86,18 @@
     return b;
   }
 
+  // 지금 고른 파츠의 SVG 를 연결된 편집기로 연다. 수치만 있는 항목은 그 폴더의 _parts.json 을 연다
+  function fileButton(cat) {
+    var b = el('button', { type: 'button', class: 'file', title: '지금 고른 파츠 파일을 편집기로 열기' }, '파일');
+    b.addEventListener('click', function () {
+      fetch('/api/open?cat=' + encodeURIComponent(cat.key) + '&id=' + encodeURIComponent(state[cat.key]) + '&fallback=1', { method: 'POST' })
+        .then(function (r) { return r.json(); })
+        .then(function (j) { say(j.error ? j.error : (j.opened || '파일') + ' 을(를) 열었습니다.'); },
+          function () { say('서버에 연결하지 못했습니다. start.bat 창이 켜져 있는지 확인하세요.'); });
+    });
+    return b;
+  }
+
   function buildPartRow(cat) {
     var list = CG.parts[cat.key];
     var row = el('div', { class: 'row' });
@@ -107,6 +121,7 @@
     row.appendChild(next);
     row.appendChild(diceButton(cat.key));
     row.appendChild(lockButton(cat.key));
+    if (SERVER) { row.appendChild(fileButton(cat)); row.className += ' has-file'; }
 
     controls[cat.key] = function () { select.value = state[cat.key]; };
     return row;
@@ -206,21 +221,23 @@
   }
 
   // ---------- 시작 ----------
-  // 묶음(헤어 / 얼굴 / 눈코입 / 악세사리 / 배경)마다 파츠 줄을 먼저, 그 묶음의 색을 뒤에 놓는다
-  var $groups = $('groups');
-  CG.groups.forEach(function (grp) {
+  // 묶음(헤어 / 눈 / 얼굴 / 악세사리 / 배경) 순서와 그 안의 줄 순서는 core.js 의 panel() 이 정한다
+  var $groups = $('groups'), lastGroup = null, sec = null;
+  CG.panel().forEach(function (block) {
     var rows = el('div', { class: 'rows' });
-    CG.categories.forEach(function (c) {
-      if (c.group === grp.key && CG.parts[c.key].length) rows.appendChild(buildPartRow(c));
-    });
-    CG.colorSlots.forEach(function (c) {
-      if (c.group === grp.key) rows.appendChild(buildColorRow(c));
+    block.items.forEach(function (it) {
+      if (it.kind === 'color') rows.appendChild(buildColorRow(it.def));
+      else if (CG.parts[it.def.key].length) rows.appendChild(buildPartRow(it.def));
     });
     if (!rows.children.length) return;
-    var sec = el('section', { class: 'group' });
-    sec.appendChild(el('h2', null, grp.name));
+    if (block.group !== lastGroup) {
+      sec = el('section', { class: 'group' });
+      sec.appendChild(el('h2', null, block.group.name));
+      $groups.appendChild(sec);
+      lastGroup = block.group;
+    }
+    if (block.sub) sec.appendChild(el('h3', null, block.sub.name));
     sec.appendChild(rows);
-    $groups.appendChild(sec);
   });
 
   $('btn-random').addEventListener('click', function () { commit(CG.randomState(state, locks)); });
@@ -341,7 +358,7 @@
   }
 
   // ---------- 빌드 (start.bat 로 띄운 로컬 서버에서만 보인다) ----------
-  if (location.protocol.indexOf('http') === 0) {
+  if (SERVER) {
     var $bstat = $('build-status');
     $('build-bar').hidden = false;
     var showBuild = function (r) {

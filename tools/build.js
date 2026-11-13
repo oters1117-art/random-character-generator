@@ -78,7 +78,7 @@ const COLORS = {
 };
 
 const LAYERS = ['hairBack', 'body', 'hairMid', 'hairBase', 'ear', 'face', 'skin', 'makeup', 'skinTop', 'mouth', 'eye',
-  'hairLine', 'hairSide', 'hairFront', 'brow', 'glasses', 'acc'];
+  'hairLine', 'hairFront', 'hairSide', 'brow', 'glasses', 'acc'];
 
 // 항목 -> 기본 레이어. 여기 없는 항목(eye, pupil, hl, lash, iris)은 따로 처리한다.
 const GENERIC = {

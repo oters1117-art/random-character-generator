@@ -1,5 +1,7 @@
 [
   {"id":"none","name":"없음","default":true,"none":true},
   {"id":"round","name":"둥근테"},
-  {"id":"square","name":"사각테"}
+  {"id":"square","name":"사각테"},
+  {"id":"boston","name":"얇은 메탈테"},
+  {"id":"horn","name":"뿔테"}
 ]

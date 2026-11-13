@@ -41,18 +41,22 @@ samples/                    확인용 캡처 모음 (없어도 됨)
   머리 `#5d4e48`, 머리 선 `#2b201d`, 피부 `#fdeeea`, 피부 선 `#b46352`, 속눈썹·아이라인 `#1e1a1a`, 눈동자 `#7e5647`, 입술 `#dc6450`, 악세사리 `#d8433b` 등.
 - 조각 안의 `@@`는 그림마다 다른 번호로 바뀐다(id 충돌 방지). 빌드가 파일 안의 id에 자동으로 붙인다.
 - 레이어 순서(아래→위):
-  `hairBack` → `body` → `hairMid` → `hairBase` → `ear` → `face` → `skin` → `makeup` → `skinTop` → `mouth` → `eye` → `hairLine` → `hairSide` → `hairFront` → `brow` → `glasses` → `acc`
+  `hairBack` → `body` → `hairMid` → `hairBase` → `ear` → `face` → `skin` → `makeup` → `skinTop` → `mouth` → `eye` → `hairLine` → `hairFront` → `hairSide` → `brow` → `glasses` → `acc`
+  (옆머리가 앞머리 위: 사용자 요청 2026-11-13)
 
 ## 항목
 
-`core.js`의 `CATEGORIES`가 기준이다. 화면은 묶음(헤어 / 얼굴 / 눈코입 / 악세사리 / 배경)으로 나뉜다.
+`core.js`의 `CATEGORIES`가 기준이다. 화면은 묶음(헤어 / 눈 / 얼굴 / 악세사리 / 배경) 순서이고, 눈 묶음은 소분류(눈 모양 / 속눈썹 / 눈동자 / 애교살·다크서클)로 나뉜다(사용자 요청 2026-11-13). 화면 순서는 `core.js`의 `panel()`이 `GROUPS`, `SUBS`, `CATEGORIES`의 `group`·`sub`, `COLOR_SLOTS`의 `after`로 만든다.
 
 | 묶음 | 그림 있는 항목 (폴더) | 수치만 있는 항목 (폴더의 `_parts.json`만) |
 |---|---|---|
 | 헤어 | `front` 앞머리, `extra` 추가머리, `side` 옆머리, `back` 뒷머리 | |
-| 얼굴 | `face` 얼굴형, `skinfx` 피부특징, `makeup` 볼터치, `lip` 립 | |
-| 눈코입 | `eye` 눈 모양, `pupil` 눈동자 무늬, `hl` 하이라이트, `brow` 눈썹, `mouth` 입 | `iris` 눈동자 크기, `lash` 속눈썹, `fold` 쌍꺼풀, `lowline` 아래 아이라인, `lowlash` 아래 속눈썹, `aegyo` 애교살, `dark` 다크서클, `eyeGap` 눈 간격, `eyeY` 눈 높이, `eyeSize` 눈 크기, `mouthY` 입 높이 |
-| 악세사리 | `acc` 헤어 악세사리, `glasses` 안경 | |
+| 눈 | `eye` 눈 모양, `pupil` 눈동자 무늬, `hl` 하이라이트 | `fold` 쌍꺼풀, `lowline` 아래 아이라인, `eyeGap`·`eyeY`·`eyeSize`, `lash` 속눈썹, `lowlash` 아래 속눈썹, `iris` 눈동자 크기, `aegyo` 애교살, `dark` 다크서클 |
+| 얼굴 | `face` 얼굴형, `skinfx` 피부특징, `makeup` 볼터치, `lip` 립, `brow` 눈썹, `mouth` 입 | `mouthY` 입 높이 |
+| 악세사리 | `acc` 헤어 악세사리, `glasses` 안경(둥근테, 사각테, 얇은 메탈테 `boston`, 뿔테 `horn`) | |
+
+- 색 슬롯: 헤어 색, 눈 색(눈동자 소분류), **피부색**(얼굴형 바로 뒤, 팔레트 `skin`), 악세사리 색, 배경 색.
+- `start.bat`(서버)로 열면 파츠 줄마다 **파일** 버튼이 붙는다: `/api/open?cat&id&fallback=1`로 지금 고른 SVG를 연결된 편집기로 연다. 수치 항목은 `_parts.json`. 열기는 한글·띄어쓰기 id도 받는다(`OPEN_RE`). 색 줄에는 없다(`.js`를 `start`로 열면 윈도우 스크립트로 실행되므로 일부러 뺐다).
 
 - `parts/base/`: 항상 그려지는 것. `body`, `ear`, `nose`, `hair`(기본머리: `fill`/`cap`/`tuck`/`edge` 그룹), `guide`(헤어라인·흐름 가이드 선).
 - 각 폴더의 `_parts.json`: 화면 이름, 순서, 랜덤 비중(`w`), 기본값(`default`), 그 밖의 표시(`none`, `down`, `noCap`, `noRing`, 수치 항목의 값).
@@ -129,7 +133,7 @@ msedge --headless --disable-gpu --hide-scrollbars --allow-file-access-from-files
 
 - Bash 히어독이나 `sed`로 `tools/build.js`를 고칠 때 **정규식의 백슬래시(`\s` 등)가 사라지거나 두 배가 되는 사고**가 여러 번 났다. 정규식이 든 줄은 Edit 도구로 고치고, 고친 뒤 빌드 결과의 파츠 수가 그대로인지 본다.
 - 삭제는 `parts/_trash`로 옮기는 방식이다(항목 편집 창). 사용자 그림 파일을 직접 지우지 않는다.
-- 피부색은 한 가지로 고정(`core.js`의 `SKIN`). 오드아이, 윙크, 한쪽만 올린 눈썹, 아프로는 사용자가 뺐다. 모자는 처음부터 안 넣기로 했다.
+- 피부색은 팔레트 `skin`(palettes.js). 지금까지 쓰던 색이 `base`로 기본값·최고 비중(8), 밝은 계열 비중이 높고 어두운 계열은 낮다(사용자 요청 2026-11-13). 볼터치·입술·코·아래눈꺼풀 색은 `core.js`의 `skinOf`가 `hex`·`line`에서 계산한다. 오드아이, 윙크, 한쪽만 올린 눈썹, 아프로는 사용자가 뺐다. 모자는 처음부터 안 넣기로 했다.
 - 사용자가 싫어한 것: 하이라이트·그림자·불필요한 안쪽 선(덩어리 모양 중심으로), 복잡한 편집 절차, 눈마다 따로 그려야 하는 구조.
 
 ## 안 된 것 / 알려진 문제

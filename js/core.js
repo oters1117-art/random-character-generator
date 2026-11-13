@@ -26,53 +26,87 @@
 
   // 아래 -> 위 순서
   var LAYERS = ['hairBack', 'body', 'hairMid', 'hairBase', 'ear', 'face', 'skin', 'makeup', 'skinTop', 'mouth', 'eye',
-    'hairLine', 'hairSide', 'hairFront', 'brow', 'glasses', 'acc'];
+    'hairLine', 'hairFront', 'hairSide', 'brow', 'glasses', 'acc'];
 
+  // 화면의 묶음. 위에서부터 이 순서로 놓인다
   var GROUPS = [
     { key: 'hair', name: '헤어' },
+    { key: 'eyes', name: '눈' },
     { key: 'face', name: '얼굴' },
-    { key: 'eyes', name: '눈코입' },
     { key: 'acc', name: '악세사리' },
     { key: 'bg', name: '배경' }
   ];
 
   // type: 'eye' 인 항목은 eye 레이어에서 한꺼번에 조립한다
+  // 같은 레이어에 그리는 항목(front/extra, makeup/lip)은 이 순서대로 쌓인다
   var CATEGORIES = [
     { key: 'front', code: 'hf', name: '앞머리', group: 'hair' },
     { key: 'extra', code: 'hx', name: '추가머리', group: 'hair', noneWeight: 0.7 },
     { key: 'side', code: 'hs', name: '옆머리', group: 'hair' },
     { key: 'back', code: 'hb', name: '뒷머리', group: 'hair' },
+    { key: 'eye', code: 'e', name: '눈 모양', group: 'eyes', sub: 'eye', type: 'eye' },
+    { key: 'fold', code: 'd', name: '쌍꺼풀', group: 'eyes', sub: 'eye', type: 'eye' },
+    { key: 'lowline', code: 'u', name: '아래 아이라인', group: 'eyes', sub: 'eye', type: 'eye' },
+    // 위치·크기 조절 (그림 없이 수치만)
+    { key: 'eyeGap', code: 'xg', name: '눈 간격', group: 'eyes', sub: 'eye', type: 'eye' },
+    { key: 'eyeY', code: 'xy', name: '눈 높이', group: 'eyes', sub: 'eye', type: 'eye' },
+    { key: 'eyeSize', code: 'xs', name: '눈 크기', group: 'eyes', sub: 'eye', type: 'eye' },
+    { key: 'lash', code: 'l', name: '속눈썹', group: 'eyes', sub: 'lash', type: 'eye' },
+    { key: 'lowlash', code: 'w', name: '아래 속눈썹', group: 'eyes', sub: 'lash', type: 'eye' },
+    { key: 'iris', code: 'i', name: '눈동자 크기', group: 'eyes', sub: 'iris', type: 'eye' },
+    { key: 'pupil', code: 'p', name: '눈동자 무늬', group: 'eyes', sub: 'iris', type: 'eye' },
+    { key: 'hl', code: 'h', name: '하이라이트', group: 'eyes', sub: 'iris', type: 'eye' },
+    { key: 'aegyo', code: 'y', name: '애교살', group: 'eyes', sub: 'under', type: 'eye' },
+    { key: 'dark', code: 'z', name: '다크서클', group: 'eyes', sub: 'under', type: 'eye' },
     { key: 'face', code: 'f', name: '얼굴형', group: 'face' },
     { key: 'skinfx', code: 's', name: '피부특징', group: 'face', noneWeight: 0.6 },
     { key: 'makeup', code: 'k', name: '볼터치', group: 'face', noneWeight: 0.25 },
     { key: 'lip', code: 'kl', name: '립', group: 'face', noneWeight: 0.5 },
-    { key: 'eye', code: 'e', name: '눈 모양', group: 'eyes', type: 'eye' },
-    { key: 'iris', code: 'i', name: '눈동자 크기', group: 'eyes', type: 'eye' },
-    { key: 'pupil', code: 'p', name: '눈동자 무늬', group: 'eyes', type: 'eye' },
-    { key: 'hl', code: 'h', name: '하이라이트', group: 'eyes', type: 'eye' },
-    { key: 'lash', code: 'l', name: '속눈썹', group: 'eyes', type: 'eye' },
-    { key: 'fold', code: 'd', name: '쌍꺼풀', group: 'eyes', type: 'eye' },
-    { key: 'lowline', code: 'u', name: '아래 아이라인', group: 'eyes', type: 'eye' },
-    { key: 'lowlash', code: 'w', name: '아래 속눈썹', group: 'eyes', type: 'eye' },
-    { key: 'aegyo', code: 'y', name: '애교살', group: 'eyes', type: 'eye' },
-    { key: 'dark', code: 'z', name: '다크서클', group: 'eyes', type: 'eye' },
-    { key: 'brow', code: 'b', name: '눈썹', group: 'eyes' },
-    { key: 'mouth', code: 'm', name: '입', group: 'eyes' },
-    // 위치·크기 조절 (그림 없이 수치만)
-    { key: 'eyeGap', code: 'xg', name: '눈 간격', group: 'eyes', type: 'eye' },
-    { key: 'eyeY', code: 'xy', name: '눈 높이', group: 'eyes', type: 'eye' },
-    { key: 'eyeSize', code: 'xs', name: '눈 크기', group: 'eyes', type: 'eye' },
-    { key: 'mouthY', code: 'xm', name: '입 높이', group: 'eyes', type: 'eye' },
+    { key: 'brow', code: 'b', name: '눈썹', group: 'face' },
+    { key: 'mouth', code: 'm', name: '입', group: 'face' },
+    { key: 'mouthY', code: 'xm', name: '입 높이', group: 'face', type: 'eye' },
     { key: 'acc', code: 'a', name: '헤어 악세사리', group: 'acc', noneWeight: 0.65 },
     { key: 'glasses', code: 'g', name: '안경', group: 'acc', noneWeight: 0.75 }
   ];
 
+  // after: 그 항목 바로 뒤에 놓는다 (없으면 묶음·소분류의 맨 뒤)
   var COLOR_SLOTS = [
     { key: 'hairColor', code: 'ch', name: '헤어 색', palette: 'hair', group: 'hair' },
-    { key: 'eyeColor', code: 'ce', name: '눈 색', palette: 'eye', group: 'eyes' },
+    { key: 'eyeColor', code: 'ce', name: '눈 색', palette: 'eye', group: 'eyes', sub: 'iris' },
+    { key: 'skinColor', code: 'cs', name: '피부색', palette: 'skin', group: 'face', after: 'face' },
     { key: 'accColor', code: 'ca', name: '악세사리 색', palette: 'acc', group: 'acc' },
     { key: 'bgColor', code: 'cb', name: '배경 색', palette: 'bg', group: 'bg' }
   ];
+
+  // 묶음 안의 소분류 (눈 묶음만 쓴다)
+  var SUBS = [
+    { key: 'eye', group: 'eyes', name: '눈 모양' },
+    { key: 'lash', group: 'eyes', name: '속눈썹' },
+    { key: 'iris', group: 'eyes', name: '눈동자' },
+    { key: 'under', group: 'eyes', name: '애교살 · 다크서클' }
+  ];
+
+  // 화면 순서: [{ group, sub, items: [항목 또는 색 슬롯] }]
+  function panel() {
+    var out = [];
+    GROUPS.forEach(function (g) {
+      var subs = SUBS.filter(function (s) { return s.group === g.key; });
+      (subs.length ? subs : [null]).forEach(function (sub) {
+        var items = [];
+        CATEGORIES.forEach(function (c) {
+          if (c.group === g.key && (c.sub || null) === (sub && sub.key)) items.push({ kind: 'part', def: c });
+        });
+        COLOR_SLOTS.forEach(function (c) {
+          if (c.group !== g.key || (c.sub || null) !== (sub && sub.key)) return;
+          var at = -1;
+          if (c.after) items.forEach(function (it, i) { if (it.def.key === c.after) at = i + 1; });
+          if (at < 0) items.push({ kind: 'color', def: c }); else items.splice(at, 0, { kind: 'color', def: c });
+        });
+        out.push({ group: g, sub: sub, items: items });
+      });
+    });
+    return out;
+  }
 
   var parts = {};
   var palettes = {};
@@ -211,13 +245,25 @@
   }
 
   // ---------- 그리기 ----------
-  // 피부색은 한 가지로 고정
-  var SKIN = { hex: '#fdeeea', line: '#b46352', blush: '#f3bfb8', lip: '#dc6450', lid: '#8b8284', nose: '#b98a88' };
+  // 피부색: 팔레트(palettes.js 의 skin)의 hex 와 line 에서 볼터치·입술·코 색을 정한다.
+  // 팔레트 항목에 blush, lip, lid, nose 를 직접 적으면 그 색을 쓴다 (기본 피부색이 그렇다).
+  function skinOf(s) {
+    var c = findIn(palettes.skin || [], s.skinColor) || { hex: '#fdeeea', line: '#b46352' };
+    return {
+      hex: c.hex,
+      line: c.line,
+      blush: c.blush || mix(c.hex, '#d04a50', 0.3),
+      lip: c.lip || mix('#dc6450', c.line, 0.25),
+      lid: c.lid || mix(c.hex, c.line, 0.75),
+      nose: c.nose || mix(c.hex, c.line, 0.6)
+    };
+  }
 
   function colorVars(s) {
     var hair = findIn(palettes.hair, s.hairColor).hex;
     var eye = findIn(palettes.eye, s.eyeColor).hex;
     var acc = findIn(palettes.acc, s.accColor).hex;
+    var SKIN = skinOf(s);
     return {
       '--hair': hair,
       '--hair-line': mix(hair, '#1c1412', 0.62),
@@ -642,6 +688,8 @@
     groups: GROUPS,
     categories: CATEGORIES,
     colorSlots: COLOR_SLOTS,
+    subs: SUBS,
+    panel: panel,
     parts: parts,
     palettes: palettes,
     load: load,

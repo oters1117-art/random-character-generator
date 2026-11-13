@@ -62,6 +62,22 @@
   ]);
 
 
+  // 피부: 지금 쓰던 색이 기본이고 비중이 가장 높다. 밝은 계열일수록 자주 나온다.
+  // line 은 얼굴·몸 윤곽선 색. blush·lip·lid·nose 를 안 적으면 hex 와 line 에서 계산한다 (core.js 의 skinOf)
+  CG.addPalette('skin', [
+    { id: 'base', name: '기본', hex: '#fdeeea', line: '#b46352', blush: '#f3bfb8', lip: '#dc6450', lid: '#8b8284', nose: '#b98a88', group: '밝은', w: 8, isDefault: true },
+    { id: 'porcelain', name: '포슬린', hex: '#fbf3f1', line: '#ad6158', group: '밝은', w: 3 },
+    { id: 'peach', name: '피치', hex: '#fff0e6', line: '#b8674f', group: '밝은', w: 3 },
+    { id: 'ivory', name: '아이보리', hex: '#fbf0e0', line: '#b0704f', group: '밝은', w: 3 },
+    { id: 'rosy', name: '로지', hex: '#fde3e0', line: '#bd5f5a', group: '밝은', w: 2.5 },
+    { id: 'lightbeige', name: '라이트 베이지', hex: '#f7e2d0', line: '#ad6449', group: '밝은', w: 2.5 },
+    { id: 'beige', name: '내추럴 베이지', hex: '#efd2ba', line: '#a35c40', group: '중간', w: 1.2 },
+    { id: 'honey', name: '허니', hex: '#e4bc98', line: '#97553a', group: '중간', w: 0.7 },
+    { id: 'tan', name: '탠', hex: '#cf9b76', line: '#804630', group: '어두운', w: 0.5 },
+    { id: 'brown', name: '브라운', hex: '#a7724f', line: '#5f3322', group: '어두운', w: 0.35 },
+    { id: 'deep', name: '딥 브라운', hex: '#77503a', line: '#3b2116', group: '어두운', w: 0.25 }
+  ]);
+
   CG.addPalette('acc', [
     { id: 'red', name: '빨강', hex: '#d8433b', isDefault: true },
     { id: 'pink', name: '핑크', hex: '#f29bb5' },

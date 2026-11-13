@@ -59,6 +59,7 @@ try {
 const PARTS = path.join(ROOT, 'parts');
 const DATA_ONLY = { iris: 1, lash: 1, fold: 1, lowline: 1, lowlash: 1, aegyo: 1, dark: 1, eyeGap: 1, eyeY: 1, eyeSize: 1, mouthY: 1 };
 const ID_RE = /^[A-Za-z0-9_-]+$/;
+const OPEN_RE = /^[\p{L}\p{N}_ -]+$/u;
 
 function catDir(cat) {
   if (!ID_RE.test(cat || '') || cat.charAt(0) === '_') throw new Error('항목 이름이 올바르지 않습니다');
@@ -143,9 +144,17 @@ async function handleApi(url, q, req) {
     return { ok: true, id: nid };
   }
   if (url === '/api/open') {
-    if (id) { const f = svgPath(cat, id); if (!fs.existsSync(f)) throw new Error(id + '.svg 가 없습니다'); openWith(f); }
-    else openWith(catDir(cat));
-    return { ok: true };
+    if (!id) { openWith(catDir(cat)); return { ok: true }; }
+    // 열기만 할 때는 한글·띄어쓰기 파일 이름도 받는다 (경로 문자와 cmd 특수문자는 막는다)
+    if (!OPEN_RE.test(id)) throw new Error('열 수 없는 파일 이름입니다: ' + id);
+    const f = path.join(catDir(cat), id + '.svg');
+    if (fs.existsSync(f)) { openWith(f); return { ok: true, opened: cat + '/' + id + '.svg' }; }
+    // 화면의 "파일" 버튼: 수치만 있는 항목은 그 폴더의 _parts.json 을 연다
+    if (q.get('fallback')) {
+      if (DATA_ONLY[cat]) { openWith(path.join(catDir(cat), '_parts.json')); return { ok: true, opened: cat + '/_parts.json' }; }
+      throw new Error('"' + id + '" 은(는) 그림 파일이 없는 항목입니다 (없음 등)');
+    }
+    throw new Error(id + '.svg 가 없습니다');
   }
   throw new Error('없는 요청입니다');
 }
