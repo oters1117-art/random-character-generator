@@ -1,8 +1,8 @@
 [
   {"id":"round","name":"둥근형","w":5,"default":true},
-  {"id":"egg","name":"계란형","w":2},
-  {"id":"pointed","name":"뾰족턱"},
+  {"id":"egg","name":"계란형","w":0.3},
+  {"id":"pointed","name":"뾰족턱","w":0.3},
   {"id":"chubby","name":"통통한 볼"},
-  {"id":"heart","name":"하트형"},
+  {"id":"heart","name":"하트형","w":0.3},
   {"id":"baby","name":"베이비페이스","w":2}
 ]
