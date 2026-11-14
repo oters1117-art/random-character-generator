@@ -28,6 +28,9 @@
   {"id":"sidebanglong","name":"사이드뱅 (L)","group":"사이드 · 비대칭","w":1},
   {"id":"diagonal","name":"사선뱅 (M)","group":"사이드 · 비대칭","w":1},
   {"id":"diagonallong","name":"사선뱅 (L)","group":"사이드 · 비대칭","w":1},
+  {"id":"sidecurveshort","name":"옆으로 구부러진 앞머리 (S)","group":"사이드 · 비대칭"},
+  {"id":"sidecurve","name":"옆으로 구부러진 앞머리 (M)","group":"사이드 · 비대칭"},
+  {"id":"sidecurvelong","name":"옆으로 구부러진 앞머리 (L)","group":"사이드 · 비대칭"},
   {"id":"eyecover1","name":"한쪽 눈 가림","group":"사이드 · 비대칭","w":1},
   {"id":"kkaennip","name":"깻잎 머리","group":"사이드 · 비대칭"},
   {"id":"pinned","name":"핀으로 넘긴 앞머리","group":"사이드 · 비대칭","w":1},
@@ -38,8 +41,5 @@
   {"id":"longwave","name":"긴 웨이브 앞머리","group":"긴 앞머리"},
   {"id":"longwave-one","name":"긴 웨이브 앞머리 (한쪽)","group":"긴 앞머리"},
   {"id":"allback","name":"올백 (앞머리 없음)","group":"올백","w":1.5,"empty":true},
-  {"id":"babyhair","name":"올백 + 잔머리","group":"올백","w":1.5},
-  {"id":"옆으로 구부러진 앞머리","name":"옆으로 구부러진 앞머리"},
-  {"id":"옆으로 구부러진 앞머리-s","name":"옆으로 구부러진 앞머리-s"},
-  {"id":"옆으로 구부러진 앞머리-l","name":"옆으로 구부러진 앞머리-l"}
+  {"id":"babyhair","name":"올백 + 잔머리","group":"올백","w":1.5}
 ]
