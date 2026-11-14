@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="702" height="702" viewBox="0 0 702 702">
   <defs>
-    <clipPath id="clip-path-1">
+    <clipPath id="clip-path-5">
       <path d="M242 389.2 L386 389.2 L386 464.8 L242 464.8 Z"/>
     </clipPath>
     <filter id="filter-1" filterUnits="userSpaceOnUse" x="245" y="377" width="138" height="100" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="9" color-interpolation-filters="linearRGB"/></filter>
-    <clipPath id="clip-path-2">
+    <clipPath id="clip-path-6">
       <path d="M460 389.2 L316 389.2 L316 464.8 L460 464.8 Z"/>
     </clipPath>
     <filter id="filter-2" filterUnits="userSpaceOnUse" x="319" y="377" width="138" height="100" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="9" color-interpolation-filters="linearRGB"/></filter>
-    <clipPath id="clip-path-3">
+    <clipPath id="clip-path-7">
       <path d="M242 360 C242 338 262 326 288 326 C314 326 334 338 334 360 C334 382 314 396 288 396 C262 396 242 382 242 360 Z"/>
     </clipPath>
-    <clipPath id="clip-path-4">
+    <clipPath id="clip-path-8">
       <path d="M460 360 C460 338 440 326 414 326 C388 326 368 338 368 360 C368 382 388 396 414 396 C440 396 460 382 460 360 Z"/>
     </clipPath>
   </defs>
@@ -83,12 +83,12 @@
         </g>
       </g>
       <g data-layer="makeup">
-        <g clip-path="url(#clip-path-1)">
+        <g clip-path="url(#clip-path-5)">
           <g filter="url(#filter-1)">
             <ellipse cx="314" cy="427" rx="40" ry="21" fill="#f3bfb8" opacity="0.5"/>
           </g>
         </g>
-        <g clip-path="url(#clip-path-2)">
+        <g clip-path="url(#clip-path-6)">
           <g filter="url(#filter-2)">
             <ellipse cx="388" cy="427" rx="40" ry="21" fill="#f3bfb8" opacity="0.5"/>
           </g>
@@ -99,7 +99,7 @@
       </g>
       <g data-layer="eye">
         <path d="M242 360 C242 338 262 326 288 326 C314 326 334 338 334 360 C334 382 314 396 288 396 C262 396 242 382 242 360 Z" fill="#ffffff"/>
-        <g clip-path="url(#clip-path-3)">
+        <g clip-path="url(#clip-path-7)">
           <g>
             <circle cx="292" cy="361" r="26" fill="#3e2a22"/>
             <circle cx="292" cy="361" r="17.42" fill="#7e5647"/>
@@ -112,7 +112,7 @@
         </g>
         <g>
           <path d="M460 360 C460 338 440 326 414 326 C388 326 368 338 368 360 C368 382 388 396 414 396 C440 396 460 382 460 360 Z" fill="#ffffff"/>
-          <g clip-path="url(#clip-path-4)">
+          <g clip-path="url(#clip-path-8)">
             <g>
               <circle cx="410" cy="361" r="26" fill="#3e2a22"/>
               <circle cx="410" cy="361" r="17.42" fill="#7e5647"/>
@@ -146,6 +146,6 @@
     </g>
   </g>
   <g id="full">
-    <path d="M377.326 481.444 C355.326 491.944 348.575 490.017 334.106 484.116 C332.913 483.63 326.614 481.174 327.76 479.216 C328.676 477.653 338.784 475.827 342.525 474.722 C356.849 470.489 358.242 474.194 369.269 475.455 C370.881 475.639 375.468 478.158 376.9 478.513 C377.422 478.642 378.053 481.097 377.326 481.444 Z" fill="#dc6450" stroke="#9c3b36" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M351 468.79 C344.6 468.79 328.941 474.077 327.76 475.204 C326.365 476.535 331.322 478.902 332.353 479.365 C339.153 482.423 345.296 484.025 351 484.025 C356.704 484.025 362.847 482.423 369.647 479.365 C370.678 478.902 375.635 476.535 374.24 475.204 C373.059 474.077 357.4 468.79 351 468.79 Z" fill="#dc6450" stroke="#9c3b36" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>
