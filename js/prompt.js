@@ -250,9 +250,9 @@
     if (accKeys.length) ko.push('악세사리: ' + join(accKeys.map(function (k) { return piece(k, state, 'ko'); })) + (accC && (has('acc', state) || has('earring', state)) ? ' / 악세사리 색 ' + ck(accC) : '') + '.');
 
     // ---------- NovelAI (Danbooru 태그) ----------
-    // 순서: 인원 → 머리색·길이·모양 → 눈 → 얼굴 → 악세사리. 앞쪽 태그가 더 세게 먹는다
+    // 순서: 머리색·길이·모양 → 눈 → 얼굴 → 악세사리. 앞쪽 태그가 더 세게 먹는다
     var nc = function (pal, x) { return x ? (NAI_COLOR[pal] || {})[x.id] || '' : ''; };
-    var tags = ['1girl', 'solo'];
+    var tags = [];
     tags.push(suffix(nc('hair', hair), 'hair'));
     ['back', 'front', 'side', 'extra'].forEach(function (k) { if (k === 'back' || has(k, state)) tags.push(nai(k, state)); });
     if (['front', 'side', 'extra', 'back'].some(function (k) { return state.only && state.only[k]; })) tags.push('asymmetrical hair');
