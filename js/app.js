@@ -552,6 +552,34 @@
       });
     };
     $('btn-sheet').onclick = function () { drawSheet(); $sdlg.showModal(); };
+    // 프롬프트 (로컬 테스트): 조합 코드를 이미지 AI용 글로 바꾼다. js/prompt.js 는 여기서만 불러오므로 공개판에는 없다
+    var $pdlg = $('prompt-dialog'), $pstat = $('prompt-status');
+    var showPrompt = function (st) {
+      var r = CG.prompt(st);
+      $('prompt-en').value = r.en; $('prompt-ko').value = r.ko; $pstat.textContent = '';
+    };
+    var withPrompt = function (fn) {
+      if (CG.prompt) { fn(); return; }
+      var sc = document.createElement('script'); sc.src = 'js/prompt.js?' + Date.now(); sc.onload = fn;
+      sc.onerror = function () { alert('js/prompt.js 를 불러오지 못했습니다.'); };
+      document.head.appendChild(sc);
+    };
+    $('btn-prompt').onclick = function () {
+      withPrompt(function () { $('prompt-code').value = CG.encode(state); showPrompt(state); $pdlg.showModal(); });
+    };
+    $('prompt-code').addEventListener('input', function () {
+      var v = $('prompt-code').value.trim().replace(/^#/, '');
+      if (v.indexOf(':') < 0) { $pstat.textContent = '조합 코드가 아닙니다.'; return; }
+      showPrompt(CG.decode(v));
+    });
+    ['en', 'ko'].forEach(function (lang) {
+      $('prompt-copy-' + lang).onclick = function () {
+        var t = $('prompt-' + lang).value;
+        var done = function () { $pstat.textContent = (lang === 'en' ? '영어' : '한국어') + ' 프롬프트를 복사했습니다.'; };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(done, function () { $('prompt-' + lang).select(); document.execCommand('copy'); done(); });
+        else { $('prompt-' + lang).select(); document.execCommand('copy'); done(); }
+      };
+    });
     $('sheet-again').onclick = drawSheet;
     $('sheet-save').onclick = function () {
       $sstat.textContent = '저장 중…';
