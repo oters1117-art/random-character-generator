@@ -1,5 +1,6 @@
 [
   {"id":"none","name":"없음","default":true,"none":true,"w":50},
   {"id":"mask","name":"마스크","w":1},
-  {"id":"maskblack","name":"검은 마스크"}
+  {"id":"maskblack","name":"검은 마스크"},
+  {"id":"bandage","name":"반창고"}
 ]

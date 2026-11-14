@@ -1,6 +1,5 @@
 [
   {"id":"none","name":"없음","default":true,"none":true},
   {"id":"mole","name":"눈물점"},
-  {"id":"freckles","name":"주근깨"},
-  {"id":"bandage","name":"반창고"}
+  {"id":"freckles","name":"주근깨"}
 ]
