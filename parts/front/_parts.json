@@ -38,5 +38,6 @@
   {"id":"longwave","name":"긴 웨이브 앞머리","group":"긴 앞머리"},
   {"id":"longwave-one","name":"긴 웨이브 앞머리 (한쪽)","group":"긴 앞머리"},
   {"id":"allback","name":"올백 (앞머리 없음)","group":"올백","w":1.5,"empty":true},
-  {"id":"babyhair","name":"올백 + 잔머리","group":"올백","w":1.5}
+  {"id":"babyhair","name":"올백 + 잔머리","group":"올백","w":1.5},
+  {"id":"옆으로 구부러진 앞머리","name":"옆으로 구부러진 앞머리"}
 ]
