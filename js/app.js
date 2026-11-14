@@ -556,7 +556,7 @@
     var $pdlg = $('prompt-dialog'), $pstat = $('prompt-status');
     var showPrompt = function (st) {
       var r = CG.prompt(st);
-      $('prompt-en').value = r.en; $('prompt-ko').value = r.ko; $pstat.textContent = '';
+      $('prompt-en').value = r.en; $('prompt-ko').value = r.ko; $('prompt-nai').value = r.nai; $pstat.textContent = '';
     };
     var withPrompt = function (fn) {
       if (CG.prompt) { fn(); return; }
@@ -572,10 +572,10 @@
       if (v.indexOf(':') < 0) { $pstat.textContent = '조합 코드가 아닙니다.'; return; }
       showPrompt(CG.decode(v));
     });
-    ['en', 'ko'].forEach(function (lang) {
+    ['en', 'nai', 'ko'].forEach(function (lang) {
       $('prompt-copy-' + lang).onclick = function () {
         var t = $('prompt-' + lang).value;
-        var done = function () { $pstat.textContent = (lang === 'en' ? '영어' : '한국어') + ' 프롬프트를 복사했습니다.'; };
+        var done = function () { $pstat.textContent = ({ en: '영어', nai: 'NovelAI', ko: '한국어' })[lang] + ' 프롬프트를 복사했습니다.'; };
         if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(done, function () { $('prompt-' + lang).select(); document.execCommand('copy'); done(); });
         else { $('prompt-' + lang).select(); document.execCommand('copy'); done(); }
       };

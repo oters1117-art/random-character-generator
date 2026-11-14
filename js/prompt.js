@@ -100,6 +100,90 @@
   };
   EN_COLOR.odd = EN_COLOR.eye;
 
+  // NovelAI (Anime V4/V4.5) 용 Danbooru 태그. 쉼표로 잇고 밑줄 대신 띄어쓰기. 빈 문자열은 태그 없음
+  var NAI = {
+    front: {
+      gapshort: 'short bangs, blunt bangs', gap: 'blunt bangs', gaplong: 'blunt bangs, long bangs', blunt: 'blunt bangs', bluntlong: 'blunt bangs, long bangs',
+      mushroomshort: 'short bangs, blunt bangs, rounded bangs', mushroom: 'blunt bangs, rounded bangs', choppyshort: 'short bangs, choppy bangs', choppy: 'choppy bangs',
+      zigzagshort: 'short bangs, jagged bangs', zigzag: 'jagged bangs', mbang: 'bangs, hair intakes', mbanglong: 'long bangs, hair intakes', tribang: 'pointy bangs',
+      curly: 'curly bangs', curlylong: 'long bangs, curly bangs', eyecover2: 'hair over eyes', seethrough: 'see-through bangs', antenna: 'see-through bangs, antenna hair',
+      centerwisp: 'forehead, single hair strand', centerlock: 'forehead, single hair strand', parted: 'parted bangs, forehead', side73: 'side part, asymmetrical bangs',
+      curtain: 'curtained hair', curtainlong: 'curtained hair, long bangs', sidebang: 'swept bangs', sidebanglong: 'swept bangs, long bangs',
+      diagonal: 'asymmetrical bangs', diagonallong: 'asymmetrical bangs, long bangs', sidecurveshort: 'swept bangs, short bangs', sidecurve: 'swept bangs', sidecurvelong: 'swept bangs, long bangs',
+      eyecover1: 'hair over one eye', kkaennip: 'swept bangs, hair over one eye', pinned: 'swept bangs, hairclip', braidbang: 'braided bangs', twostrand: 'long sidelocks, parted bangs',
+      longcurlin: 'long bangs, parted bangs', himebang: 'blunt bangs, hime cut', longwave: 'long bangs, wavy hair', 'longwave-one': 'single sidelock, wavy hair',
+      allback: 'hair slicked back, forehead, no bangs', babyhair: 'hair slicked back, forehead, no bangs'
+    },
+    extra: {
+      ahoge1: 'ahoge', ahoge2: 'ahoge, huge ahoge', apple: 'topknot', knot: 'half updo', halfbun: 'half updo, single hair bun', crownbraid: 'crown braid', buns: 'double bun',
+      onetail: 'one side up', sidetails: 'two side up', sidetailslong: 'two side up', pigtails: 'short twintails', twinhighx: 'twintails, high twintails', halftwin: 'two side up',
+      ponyx: 'high ponytail', flipends: 'flipped hair'
+    },
+    side: {
+      sideburn: 'sideburns', aegyo: 'sidelocks', jawshort: 'sidelocks', jaw: 'sidelocks', long: 'long sidelocks', chest: 'long sidelocks', xxlong: 'long sidelocks',
+      hime: 'hime cut, sidelocks', himelong: 'hime cut, long sidelocks', spike: 'spiked hair, sidelocks', spikelong: 'spiked hair, long sidelocks',
+      curlin: 'sidelocks', curlinlong: 'long sidelocks', curl: 'curled sidelocks', curllong: 'long sidelocks, curled sidelocks', volumecurl: 'sidelocks', volumecurllong: 'long sidelocks',
+      messyin: 'messy hair, long sidelocks', flipout: 'flipped hair, sidelocks', flipoutlong: 'flipped hair, long sidelocks',
+      waveshort: 'wavy hair, sidelocks', wave: 'wavy hair, sidelocks', wavelong: 'wavy hair, long sidelocks', roll: 'drill sidelocks, ringlets',
+      braid: 'braided sidelock', braidlong: 'braided sidelock, long sidelocks', braidtemple: 'french braid', tied: 'tied sidelocks, sidelocks'
+    },
+    back: {
+      none: 'short hair', pixie: 'very short hair, pixie cut', pixielong: 'short hair, pixie cut', spiky: 'short hair, spiked hair', curlyshort: 'short hair, curly hair', wolf: 'medium hair, wolf cut',
+      earbob: 'short hair, bob cut', chinbob: 'short hair, bob cut', bob: 'bob cut', longbob: 'medium hair, bob cut', sharpbob: 'short hair, bob cut, straight hair', tassel: 'short hair, bob cut, straight hair',
+      medium: 'medium hair, straight hair', midlong: 'long hair, straight hair', long: 'long hair, straight hair', chincurl: 'short hair', curlin: 'medium hair', curlmid: 'long hair',
+      flipshort: 'short hair, flipped hair', flipout: 'medium hair, flipped hair', wavechin: 'short hair, wavy hair', wavem: 'medium hair, wavy hair', wavelongbob: 'long hair, wavy hair', wavel: 'very long hair, wavy hair',
+      hippieshort: 'medium hair, curly hair', hippie: 'long hair, curly hair', waveperm: 'long hair, wavy hair', scurl: 'very long hair, wavy hair', curlyl: 'long hair, curly hair, big hair',
+      layered: 'medium hair, layered hair', layeredlong: 'long hair, layered hair', hush: 'medium hair, layered hair',
+      ponyhighshort: 'high ponytail, short ponytail', ponyhigh: 'high ponytail, long hair', ponylow: 'low ponytail', sidepony: 'side ponytail', sideponylong: 'side ponytail, long hair',
+      frontdrape: 'hair over shoulder, low ponytail', twinhigh: 'twintails', twinhighlong: 'twintails, long hair', twinshort: 'low twintails, short twintails', twin: 'low twintails', twinlong: 'low twintails, long hair',
+      pigtail: 'short twintails', drilltwin: 'twin drills', braid1: 'single braid', 'braid-big-side': 'side braid, hair over shoulder', braid2short: 'twin braids', braid2: 'twin braids, long hair', 'braid-ring': 'braided hair rings',
+      bun1: 'single hair bun', bun_l: 'single hair bun, big hair bun', bun2: 'double bun', buntwin: 'double bun, twintails', lowbun: 'low side bun', lowbuns: 'double bun, low bun', clawup: 'hair up, hair clip'
+    },
+    eye: { round: 'round eyes', tsuri: 'tsurime', tare: 'tareme', jito: 'jitome', almond: '', cat: 'tsurime, slit pupils', sharp: 'sharp eyes, tsurime', deformed: 'large eyes',
+      sleepy: 'half-closed eyes', slit: 'narrowed eyes', smile: '^ ^', closed: 'closed eyes', fox: 'narrowed eyes, tsurime' },
+    fold: { inner: '', outer: '' },
+    lash: { up1: '', up3: 'eyelashes', up5: 'long eyelashes', down1: '', down3: 'eyelashes', down5: 'long eyelashes' },
+    lowlash: { n3: 'lower eyelashes', n5: 'lower eyelashes', n7: 'lower eyelashes' },
+    iris: { big: '', small: 'sanpaku, small pupils' },
+    pupil: { big: '', small: 'small pupils', slit: 'slit pupils', ring: 'ringed eyes', rinnegan: 'ringed eyes', swirl: 'spiral eyes', heart: 'heart-shaped pupils', star: 'star-shaped pupils',
+      cross: '+ +', blank: 'empty eyes', dot: 'solid circle eyes', octo: 'symbol-shaped pupils', goat: 'horizontal pupils' },
+    hl: { one: 'eye reflection', two: 'eye reflection', pupil: 'white pupils' },
+    face: { round: 'round face', egg: '', pointed: 'pointy chin', chubby: 'chubby', heart: '', baby: 'round face, baby face' },
+    ear: { big: 'big ears', soft: 'pointy ears', elf: 'pointy ears, elf', cat: 'cat ears, animal ears', fox: 'fox ears, animal ears' },
+    skinfx: { mole: 'mole under eye', freckles: 'freckles' },
+    makeup: { blush: 'blush', 'blush-nose': 'blush, nose blush' },
+    around: { shadow: 'eyeshadow', aegyo: 'eyebags', darklight: 'bags under eyes', darkdeep: 'bags under eyes, dark circles' },
+    lip: { light: 'lips' },
+    brow: { flat: 'straight eyebrows', arch: '', down: 'raised inner eyebrows', up: 'v-shaped eyebrows', angled: '', thick: 'thick eyebrows', thin: 'thin eyebrows', short: 'short eyebrows', frown: 'furrowed brow', danmuji: 'thick eyebrows, short eyebrows' },
+    mouth: { smile: 'smile, closed mouth', line: 'expressionless, closed mouth', frown: 'frown', cat: ':3', pout: 'pout', smirk: 'smirk', wavy: 'wavy mouth', dot: ':o', o: ':o', open: 'smile, open mouth',
+      tri: 'triangle mouth', grin: 'grin', fang: 'smile, fang', frontteeth: 'buck teeth', shark: 'sharp teeth, grin', partedLips: 'parted lips' },
+    acc: { pin: 'hairclip', snap2: 'hairclip, x hair ornament', clawclip: 'hair clip', hairroll: 'hair rollers', band: 'hairband', bow: 'hairband, hair bow', bigbow: 'hair bow, large bow' },
+    glasses: { round: 'glasses, round eyewear', 'round-horn': 'glasses, round eyewear, black-framed eyewear', square: 'glasses, rectangular eyewear', 'square-horn': 'glasses, rectangular eyewear, black-framed eyewear',
+      boston: 'glasses', 'boston-horn': 'glasses, black-framed eyewear', eyepatch: 'eyepatch' },
+    earring: { 'stud-mini': 'stud earrings', stud: 'stud earrings', 'stud-mini-2': 'stud earrings, ear piercing', 'stud-big1-mini2': 'stud earrings, ear piercing', hoop: 'hoop earrings', drop: 'earrings', bar: 'earrings', cuff: 'earcuff' },
+    facewear: { mask: 'mouth mask, white mask', maskblack: 'mouth mask, black mask', bandage: 'bandaid on cheek', bandagenose: 'bandaid on nose' }
+  };
+  // 색 → Danbooru 색 태그 (머리는 '... hair', 눈은 '... eyes' 를 붙인다)
+  var NAI_COLOR = {
+    hair: { black: 'black', blueblack: 'black', darkbrown: 'brown', choco: 'brown', softbrown: 'brown', milkbrown: 'light brown', ashbrown: 'brown', khakibrown: 'brown', orangebrown: 'orange',
+      redbrown: 'brown, red', pinkbrown: 'light brown', burgundy: 'red', honey: 'blonde', beige: 'blonde', ashblonde: 'blonde', platinum: 'blonde', silverash: 'grey', ashgray: 'grey', white: 'white',
+      lavsilver: 'grey, light purple', butter: 'blonde', cherry: 'red', coral: 'orange', rosegold: 'pink', babypink: 'pink', hotpink: 'pink', ashpink: 'pink', peach: 'orange', lilacpink: 'pink',
+      lavender: 'light purple', ashpurple: 'purple', violet: 'purple', navy: 'dark blue', ashblue: 'blue', skyblue: 'light blue', midnight: 'purple', bluegray: 'grey, blue', aqua: 'aqua',
+      mint: 'aqua', pistachio: 'light green', sagegreen: 'green', teal: 'aqua', khakigreen: 'green' },
+    eye: { black: 'black', darkbrown: 'brown', brown: 'brown', hazel: 'brown', amber: 'orange', gold: 'yellow', red: 'red', pink: 'pink', purple: 'purple', blue: 'blue', sky: 'light blue', teal: 'aqua', green: 'green', gray: 'grey' },
+    skin: { base: '', porcelain: 'pale skin', peach: '', ivory: '', rosy: '', lightbeige: '', beige: '', honey: 'tan', tan: 'tan, dark-skinned female', brown: 'dark skin, dark-skinned female', deep: 'very dark skin, dark-skinned female' },
+    acc: { red: 'red', burgundy: 'red', pink: 'pink', babypink: 'pink', yellow: 'yellow', mustard: 'yellow', beige: 'brown', brown: 'brown', sage: 'green', khaki: 'green', skyblue: 'blue', navy: 'blue',
+      lavender: 'purple', gold: 'gold', silver: 'silver', white: 'white', gray: 'grey', black: 'black' }
+  };
+  // 'brown, red' + ' hair' → 'brown hair, red hair'
+  function suffix(tags, word) { return tags ? tags.split(', ').map(function (t) { return t + ' ' + word; }).join(', ') : ''; }
+  function nai(key, state) {
+    var p = part(key, state);
+    if (!p) return '';
+    var t = (NAI[key] || {})[p.id];
+    return t == null ? '' : t;
+  }
+
   function part(key, state) {
     var list = CG.parts[key] || [], id = state[key];
     for (var i = 0; i < list.length; i++) if (list[i].id === id) return list[i];
@@ -138,7 +222,6 @@
 
     // ---------- English ----------
     var en = [];
-    en.push('Flat 2D illustration of a cute young woman, front view, head and shoulders, centered, square 1:1. Simple minimal anime style: bold rounded dark outlines, flat fill colors with no shading or gradients except soft blush, clean vector look.');
     en.push('Hair: ' + c(hair) + '. ' + join(hairKeys.map(function (k) { return piece(k, state, 'en'); })) + '.');
     var eyes = [piece('eye', state, 'en'), eye ? c(eye) + ' irises' : '', has('fold', state) && piece('fold', state, 'en'), has('iris', state) && piece('iris', state, 'en'),
       state.pupil !== 'basic' && piece('pupil', state, 'en'), has('hl', state) && piece('hl', state, 'en'), has('lash', state) && piece('lash', state, 'en'), has('lowlash', state) && piece('lowlash', state, 'en'),
@@ -147,17 +230,12 @@
     en.push('Eyes: ' + join(eyes) + '.' + (odd ? ' Heterochromia: the eye on the viewer\'s ' + (oddSide ? 'left' : 'right') + ' is ' + c(odd) + '.' : ''));
     var face = [piece('face', state, 'en'), skin ? c(skin) + ' skin' : '', has('ear', state) && piece('ear', state, 'en'), piece('brow', state, 'en'), piece('mouth', state, 'en'),
       ({ down:'mouth set slightly lower', up: 'mouth set slightly higher' })[state.mouthY],
-      has('makeup', state) && piece('makeup', state, 'en'), has('lip', state) && piece('lip', state, 'en'), has('around', state) && piece('around', state, 'en'), has('skinfx', state) && piece('skinfx', state, 'en'),
-      'a small simple line nose'];
+      has('makeup', state) && piece('makeup', state, 'en'), has('lip', state) && piece('lip', state, 'en'), has('around', state) && piece('around', state, 'en'), has('skinfx', state) && piece('skinfx', state, 'en')];
     en.push('Face: ' + join(face) + '.');
     if (accKeys.length) en.push('Accessories: ' + join(accKeys.map(function (k) { return piece(k, state, 'en'); })) + (accC && (has('acc', state) || has('earring', state)) ? '; accessory color ' + c(accC) : '') + '.');
-    en.push('Wearing a plain simple top with a round neckline.');
-    en.push(bg && bg.id !== 'none' ? 'Plain solid ' + c(bg) + ' background.' : 'Transparent / plain white background.');
-    en.push('No text, no watermark.');
 
     // ---------- 한국어 ----------
     var ko = [];
-    ko.push('귀여운 젊은 여성의 플랫한 2D 일러스트. 정면, 어깨까지 나오는 얼굴, 가운데, 1:1 정사각형. 단순한 애니메이션풍: 굵고 둥근 진한 외곽선, 그림자·그라데이션 없는 단색 채색(볼터치만 부드럽게).');
     var catName = function (k) { return CG.categories.filter(function (x) { return x.key === k; })[0].name; };
     ko.push('머리: ' + ck(hair) + '. ' + join(hairKeys.map(function (k) { return catName(k) + ' ' + piece(k, state, 'ko'); })) + '.');
     var eyesKo = [piece('eye', state, 'ko'), eye ? '눈동자 ' + ck(eye) : '', has('fold', state) && piece('fold', state, 'ko'), has('iris', state) && piece('iris', state, 'ko'),
@@ -167,13 +245,33 @@
     ko.push('눈: ' + join(eyesKo) + '.' + (odd ? ' 오드아이: 화면 ' + (oddSide ? '왼쪽' : '오른쪽') + ' 눈은 ' + ck(odd) + '.' : ''));
     var faceKo = [piece('face', state, 'ko'), skin ? '피부 ' + ck(skin) : '', has('ear', state) && piece('ear', state, 'ko'), '눈썹 ' + piece('brow', state, 'ko'), '입 ' + piece('mouth', state, 'ko'),
       ({ down: '입 조금 아래로', up: '입 조금 위로' })[state.mouthY], has('makeup', state) && piece('makeup', state, 'ko'), has('lip', state) && '립 ' + piece('lip', state, 'ko'),
-      has('around', state) && piece('around', state, 'ko'), has('skinfx', state) && piece('skinfx', state, 'ko'), '코는 작은 선 하나'];
+      has('around', state) && piece('around', state, 'ko'), has('skinfx', state) && piece('skinfx', state, 'ko')];
     ko.push('얼굴: ' + join(faceKo) + '.');
     if (accKeys.length) ko.push('악세사리: ' + join(accKeys.map(function (k) { return piece(k, state, 'ko'); })) + (accC && (has('acc', state) || has('earring', state)) ? ' / 악세사리 색 ' + ck(accC) : '') + '.');
-    ko.push('옷은 둥근 목선의 단순한 민무늬 상의.');
-    ko.push(bg && bg.id !== 'none' ? '배경은 ' + ck(bg) + ' 단색.' : '배경은 투명 또는 흰색.');
-    ko.push('글자, 워터마크 없음.');
 
-    return { en: en.join('\n'), ko: ko.join('\n') };
+    // ---------- NovelAI (Danbooru 태그) ----------
+    // 순서: 인원 → 머리색·길이·모양 → 눈 → 얼굴 → 악세사리. 앞쪽 태그가 더 세게 먹는다
+    var nc = function (pal, x) { return x ? (NAI_COLOR[pal] || {})[x.id] || '' : ''; };
+    var tags = ['1girl', 'solo'];
+    tags.push(suffix(nc('hair', hair), 'hair'));
+    ['back', 'front', 'side', 'extra'].forEach(function (k) { if (k === 'back' || has(k, state)) tags.push(nai(k, state)); });
+    if (['front', 'side', 'extra', 'back'].some(function (k) { return state.only && state.only[k]; })) tags.push('asymmetrical hair');
+    if (odd && odd.id !== state.eyeColor) tags.push('heterochromia', suffix(nc('eye', eye), 'eyes'), suffix(nc('eye', odd), 'eyes'));
+    else tags.push(suffix(nc('eye', eye), 'eyes'));
+    ['eye', 'iris', 'pupil', 'hl', 'lash', 'lowlash', 'fold'].forEach(function (k) { if (has(k, state)) tags.push(nai(k, state)); });
+    if (state.lowline === 'on') tags.push('eyeliner');
+    if (state.eyeSize === 'big') tags.push('large eyes');
+    ['face', 'ear'].forEach(function (k) { if (has(k, state)) tags.push(nai(k, state)); });
+    tags.push(nc('skin', skin));
+    ['brow', 'mouth', 'makeup', 'lip', 'around', 'skinfx'].forEach(function (k) { if (has(k, state)) tags.push(nai(k, state)); });
+    ['acc', 'glasses', 'earring', 'facewear'].forEach(function (k) { if (has(k, state)) tags.push(nai(k, state)); });
+    // 색은 물건 이름에 붙인다 ('red hair ornament' 는 머리색으로 번지기 쉽다)
+    var accNoun = { pin: 'hairclip', snap2: 'hairclip', clawclip: 'hair clip', hairroll: 'hair rollers', band: 'hairband', bow: 'bow', bigbow: 'bow' }[state.acc];
+    if (accC && accNoun) tags.push(nc('acc', accC).split(', ')[0] + ' ' + accNoun);
+    // 겹치는 태그는 한 번만
+    var seen = {}, naiTags = [];
+    tags.join(', ').split(', ').forEach(function (t) { t = t.trim(); if (t && !seen[t]) { seen[t] = 1; naiTags.push(t); } });
+
+    return { en: en.join('\n'), ko: ko.join('\n'), nai: naiTags.join(', ') };
   };
 })(window.CG);

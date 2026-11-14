@@ -107,15 +107,19 @@
       <h2>프롬프트 <small>(로컬 테스트)</small></h2>
       <button value="close" aria-label="닫기">닫기</button>
     </form>
-    <p class="items-help">지금 캐릭터를 이미지 생성 AI에 넣을 글로 바꿉니다. 다른 조합 코드는 아래 칸에 붙여 넣으면 바로 바뀝니다.</p>
+    <p class="items-help">지금 캐릭터의 특징만 이미지 생성 AI에 넣을 글로 바꿉니다(그림체·옷·배경은 빼고). 다른 조합 코드는 아래 칸에 붙여 넣으면 바로 바뀝니다.</p>
     <input id="prompt-code" type="text" spellcheck="false" aria-label="조합 코드">
     <div class="prompt-col">
       <div class="prompt-head"><b>English</b><button id="prompt-copy-en" type="button">복사</button></div>
-      <textarea id="prompt-en" readonly rows="9"></textarea>
+      <textarea id="prompt-en" readonly rows="5"></textarea>
+    </div>
+    <div class="prompt-col">
+      <div class="prompt-head"><b>NovelAI 태그</b><button id="prompt-copy-nai" type="button">복사</button></div>
+      <textarea id="prompt-nai" readonly rows="4"></textarea>
     </div>
     <div class="prompt-col">
       <div class="prompt-head"><b>한국어</b><button id="prompt-copy-ko" type="button">복사</button></div>
-      <textarea id="prompt-ko" readonly rows="8"></textarea>
+      <textarea id="prompt-ko" readonly rows="5"></textarea>
     </div>
     <span id="prompt-status" class="status"></span>
   </dialog>
